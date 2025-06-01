@@ -5,6 +5,7 @@ import RootLayout from '@/components/layout/RootLayout/RootLayout';
 import RootPage from '@/components/root/RootPage';
 import { useGetAllQuery } from '@/store/services/commonApi';
 import React, { useEffect, useState } from 'react';
+import Container from '../home-page/Container';
 
 interface Service {
 	icon: string;
@@ -35,7 +36,8 @@ const ServicePage = () => {
 
 	return (
 		<RootLayout isLoading={isLoading}>
-			<RootPage
+			<Container>
+				<RootPage
 				headerText='Our Engineering Services'
 				headerDescription='Sinamm Engineering offers a comprehensive range of construction and engineering services designed to meet the diverse needs of our clients across Bangladesh.'
 			>
@@ -69,6 +71,8 @@ const ServicePage = () => {
 				</div> */}
 				<Specialization />
 			</RootPage>
+			</Container>
+			
 		</RootLayout>
 	);
 };

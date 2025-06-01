@@ -3,6 +3,7 @@ import RootLayout from '../layout/RootLayout/RootLayout'
 import RootPage from '../root/RootPage'
 import Image from 'next/image'
 import TextBreak from '../ui/TextBreak';
+import Container from '../home-page/Container';
 
 const privacyText = `
 At SINAMM ENGINEERING LTD, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you interact with our website or services. We may collect your name, email, phone number, and information about how you use our site to help improve our services and respond to your inquiries. We do not sell or rent your data, but may share it with trusted partners or legal authorities when necessary.
@@ -15,7 +16,8 @@ We take appropriate security measures to protect your information, though no sys
 const Privacy = () => {
   return (
     <RootLayout>
-      <RootPage
+      <Container>
+        <RootPage
         headerText='Privacy Policy'
         headerDescription='Learn how we collect, use, and protect your personal information when you interact with our services.'
       >
@@ -33,7 +35,7 @@ const Privacy = () => {
               ))}
             </div>
           </div>
-          <div className='lg:w-1/2 w-full grid grid-cols-2 grid-rows-2 gap-2 h-auto'>
+          {/* <div className='lg:w-1/2 w-full grid grid-cols-2 grid-rows-2 gap-2 h-auto'>
               <div className='overflow-hidden rounded-card'>
                 <img
                   src='/ruppur.jpeg'
@@ -55,9 +57,11 @@ const Privacy = () => {
                   className='w-full h-full object-cover'
                 />   
               </div>
-          </div>          
+          </div>           */}
         </div>         
       </RootPage>
+      </Container>
+      
     </RootLayout>
   )
 }

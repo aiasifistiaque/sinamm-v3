@@ -16,7 +16,7 @@ const Specialization = () => {
 	});
 	const speecialization = data?.doc || [];
 	return (
-		<Container>
+		// <Container>
 			<div className='space-y-5 py-4'>
 				{/* <h2 className='text-4xl md:text-8xl font-primary font-bold text-mainText'></h2> */}
 				<PageTitle>Our field of specialization</PageTitle>
@@ -54,7 +54,7 @@ const Specialization = () => {
 					)}
 				</div>
 			</div>
-		</Container>
+		// </Container>
 	);
 };
 

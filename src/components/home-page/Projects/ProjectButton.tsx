@@ -50,8 +50,8 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ onFilterChange, categorie
 	// Button configurations
 	const filterButtons: { label: string; value: ProjectFilter }[] = [
 		{ label: 'All', value: 'all' },
-		{ label: 'Ongoing', value: 'ongoing' },
 		{ label: 'Completed', value: 'completed' },
+		{ label: 'Ongoing', value: 'ongoing' },
 	];
 
 	const buttonCss = cn(

@@ -5,20 +5,20 @@ import Container from '../Container';
 const RightSide: FC = () => {
 	const statsData = [
 		{
-			value: '20+',
+			value: '17+',
 			label: 'Years Experience',
 		},
 		{
-			value: '100+',
+			value: '66+',
 			label: 'Projects Complete',
 		},
 		{
-			value: '80+',
+			value: '486+',
 			label: 'Expert Engineers',
 		},
 		{
-			value: '25+',
-			label: 'Awards Won',
+			value: '57+',
+			label: 'Certificates',
 		},
 	];
 

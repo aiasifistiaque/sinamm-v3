@@ -3,9 +3,10 @@ import React from 'react'
 const DetailsBanner = ({ data, children }: any) => {
   return (
     <div
-			className='w-full h-[65vh] bg-cover bg-center relative'
+			className='w-full h-[85vh] bg-cover bg-top relative'
 			style={{
 				backgroundImage: `url(${data?.coverImage || '/fallback-image.jpg'})`,
+				
 			}}
 		>
 			{/* Gradient Overlay */}

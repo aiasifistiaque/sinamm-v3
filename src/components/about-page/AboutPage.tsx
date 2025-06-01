@@ -41,7 +41,9 @@ const AboutPage = () => {
 				<BorderBottom className='container mx-auto py-0' />
 				<TopManagement data={topManagement} />
 				<BorderBottom className='container mx-auto py-0' />
+				<Container>
 				<Specialization />
+				</Container>
 				<BorderBottom />
 				<Management />
 				<BorderBottom />
