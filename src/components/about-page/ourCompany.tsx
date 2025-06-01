@@ -43,7 +43,7 @@ const OurCompany = () => {
 					<TitleContainer>{ourCompany?.title}</TitleContainer>
 					<Subtitle className='md:w-3/4'>{ourCompany?.paragraphs}</Subtitle>
 				</div>
-				<div className='grid grid-cols-2 gap-1 animate-slide-in-right'>
+				<div className='grid grid-cols-2 gap-[2px] animate-slide-in-right'>
 					{ourCompany && ourCompany?.images && (
 						<>
 							<div className='overflow-hidden'>
