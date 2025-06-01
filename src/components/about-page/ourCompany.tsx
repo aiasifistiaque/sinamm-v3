@@ -44,33 +44,30 @@ const OurCompany = () => {
 					<Subtitle className='md:w-3/4'>{ourCompany?.paragraphs}</Subtitle>
 				</div>
 				<div className='grid grid-cols-2 gap-[2px] animate-slide-in-right'>
-					{ourCompany && ourCompany?.images && (
-						<>
-							<div className='overflow-hidden'>
-								<img
-									src={ourCompany?.images[0]?.url}
-									alt={ourCompany?.images[0]?.alt || 'Sinamm Engineering Office'}
-									className='w-full h-full object-cover'
-								/>
-							</div>
-							<div className='overflow-hidden row-span-2'>
-								<img
-									src={ourCompany?.images[1]?.url}
-									alt={ourCompany?.images[1]?.alt}
-									className='w-full h-full object-cover'
-								/>
-							</div>
-							{ourCompany.images[2] && (
-								<div className='overflow-hidden'>
-									<img
-										src={ourCompany?.images[2].url}
-										alt={ourCompany?.images[2].alt}
-										className='w-full h-full object-cover'
-									/>
-								</div>
-							)}
-						</>
-					)}
+					<>
+						<div className='overflow-hidden bg-[#0d0d0'>
+							<img
+								src={ourCompany?.images[0]?.url}
+								alt={ourCompany?.images[0]?.alt || 'Sinamm Engineering Office'}
+								className='w-full h-full object-cover'
+							/>
+						</div>
+						<div className='overflow-hidden row-span-2 bg-[#0d0d0'>
+							<img
+								src={ourCompany?.images[1]?.url}
+								alt={ourCompany?.images[1]?.alt}
+								className='w-full h-full object-cover'
+							/>
+						</div>
+
+						<div className='overflow-hidden bg-[#0d0d0d]'>
+							<img
+								src={ourCompany?.images[2]?.url}
+								alt={ourCompany?.images[2]?.alt}
+								className='w-full h-full object-cover'
+							/>
+						</div>
+					</>
 				</div>
 			</div>
 		</Container>
