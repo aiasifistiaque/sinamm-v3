@@ -55,35 +55,10 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 
 		const interval = setInterval(() => {
 			setCurrentImageIndex(prev => (prev + 1) % carouselImages?.length);
-		}, 5000); // Change image every 10 seconds
+		}, 5000); // Change image every 5 seconds
 
 		return () => clearInterval(interval);
 	}, [carouselImages]);
-
-	// Video-like instant transition variants
-	const imageVariants = {
-		enter: {
-			opacity: 1, // Instant visibility
-			x: 0,
-			scale: 1.15, // Reduced zoom level
-		},
-		center: {
-			opacity: 1,
-			x: 0,
-			scale: 1.15, // Keep moderately zoomed throughout
-			transition: {
-				duration: 0, // Instant transition
-			},
-		},
-		exit: {
-			opacity: 1, // Keep visible until instant switch
-			x: 0,
-			scale: 1.15,
-			transition: {
-				duration: 0, // Instant transition
-			},
-		},
-	};
 
 	useEffect(() => {
 		setIsVisible(true);
@@ -126,72 +101,89 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 					className='absolute inset-0 z-0 parallax-element enhanced-parallax overflow-hidden'
 					style={{ y: backgroundY }}>
 					<div className='relative w-full h-[140vh] bg-[#0d0d0d]'>
-						{/* Static background image to prevent flash */}
-						{carouselImages && carouselImages[0] && (
+						{/* Always visible background image to prevent black flash */}
+						{carouselImages && carouselImages[currentImageIndex] && (
 							<div
-								className='absolute inset-0 w-full h-full bg-cover bg-center opacity-30'
+								className='absolute inset-0 w-full h-full bg-cover bg-center opacity-40 transition-opacity duration-500'
 								style={{
-									backgroundImage: `url(${carouselImages[0]})`,
+									backgroundImage: `url(${carouselImages[currentImageIndex]})`,
 								}}
 							/>
 						)}
 
-						<AnimatePresence
-							mode='wait'
-							initial={false}>
-							{carouselImages && carouselImages[currentImageIndex] && (
-								<motion.div
-									key={currentImageIndex}
-									custom={1}
-									variants={imageVariants}
-									initial='enter'
-									animate='center'
-									exit='exit'
-									className='absolute inset-0 w-full h-full'>
-									{/* Background fallback to prevent black flash */}
-									<div className='absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 to-black' />
-
-									<Container>
-										<motion.img
-											src={carouselImages[currentImageIndex]}
-											alt={`Banner image ${currentImageIndex + 1}`}
-											className='relative w-full h-full object-cover z-10'
-											style={{
-												objectPosition: 'center bottom', // Zoom from bottom
-											}}
-											initial={{
-												scale: 1.4, // Start more zoomed for bottom cropping
-												x: -60, // Start further left for longer movement
-											}}
-											animate={{
-												scale: 1.3, // Still zoomed but slightly less
-												x: 60, // Move further right for longer travel
-											}}
-											transition={{
-												scale: { duration: 10, ease: 'linear' }, // Match display duration
-												x: {
-													duration: 10, // Match the 10-second display time
-													ease: 'linear', // Linear for video-like constant motion
-												},
-											}}
-										/>
-									</Container>
-
-									{/* Dynamic overlay that moves */}
+						{/* Render current and next image for seamless transition */}
+						<div className='relative w-full h-full'>
+							{carouselImages?.map((image: string, index: number) => {
+								const isActive = index === currentImageIndex;
+								return (
 									<motion.div
-										className='absolute inset-0 bg-gradient-to-r from-transparent via-black/20 to-transparent'
-										initial={{ x: '-100%' }}
-										animate={{ x: '100%' }}
-										transition={{
-											duration: 3,
-											repeat: Infinity,
-											repeatDelay: 2,
-											ease: 'easeInOut',
+										key={`image-${index}`}
+										className='absolute inset-0 w-full h-full'
+										initial={{ opacity: 0 }}
+										animate={{
+											opacity: isActive ? 1 : 0,
 										}}
-									/>
-								</motion.div>
-							)}
-						</AnimatePresence>
+										transition={{
+											duration: 0.8,
+											ease: 'easeInOut',
+										}}>
+										{/* Background fallback */}
+										<div className='absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 to-black' />
+
+										<Container>
+											<motion.img
+												src={image}
+												alt={`Banner image ${index + 1}`}
+												className='relative w-full h-full object-cover z-10'
+												style={{
+													objectPosition: 'center bottom',
+												}}
+												initial={false}
+												animate={
+													isActive
+														? {
+																scale: 1.3,
+																x: 60,
+														  }
+														: {
+																scale: 1.4,
+																x: -60,
+														  }
+												}
+												transition={
+													isActive
+														? {
+																scale: { duration: 5, ease: 'linear' },
+																x: {
+																	duration: 5,
+																	ease: 'linear',
+																},
+														  }
+														: {
+																duration: 0,
+														  }
+												}
+											/>
+										</Container>
+
+										{/* Dynamic overlay that moves - only on active image */}
+										{isActive && (
+											<motion.div
+												className='absolute inset-0 bg-gradient-to-r from-transparent via-black/20 to-transparent'
+												initial={{ x: '-100%' }}
+												animate={{ x: '100%' }}
+												transition={{
+													duration: 3,
+													repeat: Infinity,
+													repeatDelay: 2,
+													ease: 'easeInOut',
+												}}
+											/>
+										)}
+									</motion.div>
+								);
+							})}
+						</div>
 					</div>
 				</motion.div>
 			</div>
