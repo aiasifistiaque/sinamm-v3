@@ -9,7 +9,7 @@ const RightSide: FC = () => {
 			label: 'Years Experience',
 		},
 		{
-			value: '66+',
+			value: '65+',
 			label: 'Projects Complete',
 		},
 		{

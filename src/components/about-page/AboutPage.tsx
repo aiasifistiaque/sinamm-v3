@@ -39,13 +39,18 @@ const AboutPage = () => {
 				{/* history */}
 				<History />
 				<BorderBottom className='container mx-auto py-0' />
+				<Container>
+
 				<TopManagement data={topManagement} />
+				</Container>
 				<BorderBottom className='container mx-auto py-0' />
 				<Container>
 				<Specialization />
 				</Container>
 				<BorderBottom />
-				<Management />
+				{/* <Container> */}
+					<Management />
+				{/* </Container> */}
 				<BorderBottom />
 				<Container className='pt-4'>
 					<CoreValues />
