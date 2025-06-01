@@ -3,9 +3,8 @@ import React, { FC } from 'react';
 import { policyData } from '@/lib/constant';
 import TeamPreview from './TeamPreview';
 import PolicySectionCard from './PolicySectionCard';
-import Column from '../Column';
-import Flex from '../Flex';
-import Container from '../Container';
+
+import { Container, Column, Grid } from '@/components';
 import ViewAllLink from '@/components/ui/ViewAllLink';
 
 type PolicySectionProps = {};
@@ -21,17 +20,14 @@ const PolicySection: FC<PolicySectionProps> = ({}) => {
 					paragraphText='Our commitment extends beyond occupational safety. We are equally dedicated to minimizing our environmental impact and promoting sustainable practices across all areas of our business. From project planning to execution, we strive to reduce waste, conserve resources, and implement eco-friendly construction methods that align with both local and international environmental standards.'
 				/>
 
-				{/* Content */}
-				{/* <Flex className='gap-4 w-full overflow-hidden'> */}
-				<div className='grid grid-cols-3 md:grid-cols-6 gap-2'>
+				<Grid className='grid-cols-3 md:grid-cols-6 gap-2'>
 					{policyData?.map((item: any, index: number) => (
 						<PolicySectionCard
 							key={index}
 							item={item}
 						/>
 					))}
-				</div>
-				{/* </Flex> */}
+				</Grid>
 			</Column>
 			<TeamPreview />
 			<ViewAllLink

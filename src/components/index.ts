@@ -6,3 +6,4 @@ export { default as Grid } from './home-page/Grid';
 export { default as Subtitle } from './home-page/Subtitle';
 export { default as Box } from './home-page/Box';
 export { default as PageTitle } from './home-page/PageTitle';
+export { default as Image } from './home-page/Image';

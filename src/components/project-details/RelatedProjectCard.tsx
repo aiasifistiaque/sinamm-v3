@@ -4,6 +4,7 @@ import { useGetAllQuery } from '@/store/services/commonApi';
 import Link from 'next/link';
 // import { Link } from 'lucide-react';
 import React from 'react';
+import { Box, Column, Grid } from '@/components';
 
 const RelatedProjectCard = ({ data }: any) => {
 	const { data: relatedProjects } = useGetAllQuery({
@@ -14,33 +15,35 @@ const RelatedProjectCard = ({ data }: any) => {
 		},
 	});
 
-	const relatedProjectsData = relatedProjects?.doc;
-
-	console.log('related projects data::', relatedProjectsData);
 	return (
-		<div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2'>
-			{relatedProjectsData?.map((project: any, i: number) => (
-				<div
-					key={i}
-					className='w-full h-auto bg-cardBg overflow-hidden'>
-					<Link href={`/projects/${project?.category?._id}`}>
-						<div className='w-full flex flex-col gap-0'>
-							<div className='w-full h-[250px]'>
-								<img
-									src={project?.image}
-									alt={'img'}
-									className='w-full h-full object-cover'
-								/>
-							</div>
+		<Grid className='w-full grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-[2px]'>
+			{relatedProjects?.doc?.map(
+				(project: any, i: number) =>
+					project?._id !== data?._id && (
+						<Box
+							key={i}
+							className='w-full h-auto bg-cardBg overflow-hidden'>
+							<Link href={`/projects/${project?._id}`}>
+								<Column className='w-full flex flex-col gap-0'>
+									<Box className='w-full h-[250px]'>
+										<img
+											src={project?.image}
+											alt={'img'}
+											className='w-full h-full object-cover'
+										/>
+									</Box>
 
-							<div className='p-2 px-3 uppercase'>
-								<h3 className='text-xl font-primary font-normal text-mainText'>{project?.name}</h3>
-							</div>
-						</div>
-					</Link>
-				</div>
-			))}
-		</div>
+									<Box className='p-2 px-3 uppercase'>
+										<h3 className='text-xl font-primary font-normal text-mainText'>
+											{project?.name}
+										</h3>
+									</Box>
+								</Column>
+							</Link>
+						</Box>
+					)
+			)}
+		</Grid>
 	);
 };
 

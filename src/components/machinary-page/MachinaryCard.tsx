@@ -13,16 +13,11 @@ type MachinaryCardProps = {
 	fallbackImage: any;
 };
 
-const MachinaryCard: FC<MachinaryCardProps> = ({
-	item,
-	isValidUrl,
-	fallbackImage,
-}) => {
+const MachinaryCard: FC<MachinaryCardProps> = ({ item, isValidUrl, fallbackImage }) => {
 	return (
 		<Card
 			// key={i}
-			className=' border-gray-100 bg-cardBg overflow-hidden rounded-[12px]'
-		>
+			className='  bg-cardBg overflow-hidden rounded-[12px]'>
 			<Carousel className='w-full'>
 				<CarouselContent>
 					{item?.mediaImages?.map((image: any, index: number) => (
@@ -34,10 +29,7 @@ const MachinaryCard: FC<MachinaryCardProps> = ({
 									className='w-full h-full object-cover object-center'
 									loading='lazy'
 									onError={e => {
-										if (
-											e.currentTarget.src !==
-											window.location.origin + fallbackImage
-										) {
+										if (e.currentTarget.src !== window.location.origin + fallbackImage) {
 											e.currentTarget.src = fallbackImage;
 										}
 									}}
@@ -62,20 +54,21 @@ const MachinaryCard: FC<MachinaryCardProps> = ({
 
 export default MachinaryCard;
 
-{/* <MachinaryCard
+{
+	/* <MachinaryCard
                       item={item}
                       isValidUrl={isValidUrl}
                       fallbackImage={fallbackImage}
-                    /> */}
+                    /> */
+}
 
-
-                    // <div>
-										// 	<h4 className='text-lg font-primary font-semibold text-gray-800 mb-2'>
-										// 		Specifications:
-										// 	</h4>
-										// 	<ul className='list-disc list-inside space-y-1 text-gray-700'>
-										// 		{item?.specification.map((spec: any, index: number) => (
-										// 			<li key={index}>{spec}</li>
-										// 		))}
-										// 	</ul>
-										// </div>;
+// <div>
+// 	<h4 className='text-lg font-primary font-semibold text-gray-800 mb-2'>
+// 		Specifications:
+// 	</h4>
+// 	<ul className='list-disc list-inside space-y-1 text-gray-700'>
+// 		{item?.specification.map((spec: any, index: number) => (
+// 			<li key={index}>{spec}</li>
+// 		))}
+// 	</ul>
+// </div>;

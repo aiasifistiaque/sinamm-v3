@@ -5,7 +5,7 @@ const PageTitle = ({ children, className }: any) => {
 	return (
 		<p
 			className={cn(
-				'text-4xl font-primary md:text-[78px] uppercase leading-[1] tracking-[-2px] text-mainText',
+				'text-4xl font-primary md:text-[78px] uppercase leading-[1] md:ml-[-2px] tracking-[-2px] text-mainText',
 				className
 			)}>
 			{children}

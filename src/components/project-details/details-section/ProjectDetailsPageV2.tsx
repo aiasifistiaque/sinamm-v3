@@ -11,7 +11,6 @@ import Container from '@/components/home-page/Container';
 // import RelatedProjectCard from '../RelatedProjectCard';
 
 const ProjectDetailsPageV2 = ({ data, projectGallerieData }: any) => {
-	// console.log('dprojectGallerieData:', projectGallerieData);
 	return (
 		<RootLayout>
 			<Container>

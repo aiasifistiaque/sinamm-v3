@@ -21,6 +21,10 @@ const ProjectOverview = ({ data }: any) => {
 						value={data?.location}
 					/>
 					<DetailsLi
+						label='Project Status'
+						value={data?.projectStatus}
+					/>
+					<DetailsLi
 						label='Start Date'
 						value={dateFormater(data?.projectStartingDate)}
 					/>

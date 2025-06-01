@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { PiArrowCircleRightThin, PiArrowUpRightThin } from 'react-icons/pi';
 import { cn } from '@/lib/utils';
-import { Subtitle, Flex } from '@/components';
+import { Subtitle, Flex, PageTitle } from '@/components';
 
 interface SectionIntroProps {
 	headerText?: string;
@@ -32,17 +32,9 @@ const SectionIntro: React.FC<SectionIntroProps> = ({
 }) => {
 	// px-1 md:px-2
 	return (
-		<div className={`mb-8 flex flex-col ${className}`}>
-			{/* <SectionHeader text={headerText || ""} /> */}
-			<h2
-				className={`text-3xl md:text-[78px] md:text-left uppercase leading-[1] tracking-[-2px] font-primary text-mainText ${className}`}>
-				{headingText || ''}
-			</h2>
+		<Flex className={`mb-8 flex flex-col ${className}`}>
+			<PageTitle className={`text-3xl ${className}`}>{headingText || ''}</PageTitle>
 			<Flex className='flex-col md:flex-row w-full items-center md:items-end md:justify-between gap-6 md:gap-8 '>
-				{/* <p
-					className={`md:text-left md:max-w-[40vw] font-[18px] text-paraText line-clamp-3 md:line-clamp-none ${paragraphClassName}`}>
-					{paragraphText || ''}
-				</p> */}
 				<Subtitle
 					className={`md:max-w-[60vw] line-clamp-3 md:line-clamp-none ${paragraphClassName}`}>
 					{paragraphText || ''}
@@ -73,7 +65,7 @@ const SectionIntro: React.FC<SectionIntroProps> = ({
 					</Link>
 				)}
 			</Flex>
-		</div>
+		</Flex>
 	);
 };
 
