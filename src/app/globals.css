@@ -13,7 +13,7 @@
 	/* --color-mainBg: #faf8f1; */
 	--color-mainBg: #f2f2f2;
 	/* --color-cardBg: rgb(233, 231, 221); */
-	--color-cardBg: #FFFFFF;
+	--color-cardBg: #ffffff;
 	--color-button-border: #e9e7dd;
 	--color-mainText: #1e2939;
 	--color-paraText: #567b7a;
@@ -32,10 +32,8 @@
 *::after {
 	box-sizing: border-box;
 	/* --color-mainText: #0d0d0d; */
-	
 }
 .line-badge {
-	
 	position: relative;
 }
 
@@ -48,9 +46,9 @@
 	padding:0px;
 
 } */
- .destext {
+.destext {
 	font-size: 16px;
- }
+}
 
 .line-badge::after {
 	content: '';
@@ -120,6 +118,13 @@
 	transform: translateZ(0);
 	backface-visibility: hidden;
 }
+//Reverse
+.animate-marquee-desktop-reverse {
+	animation: marquee-desktop 60s linear infinite;
+	will-change: transform;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
 /* ObjektivMk2_Trial_Md.ttf */
 @font-face {
 	font-family: 'Objektiv';
@@ -170,76 +175,74 @@
 	backface-visibility: hidden;
 }
 
-
 @layer utilities {
-  @keyframes sheet-open {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
+	@keyframes sheet-open {
+		0% {
+			transform: translateX(100%);
+		}
+		100% {
+			transform: translateX(0%);
+		}
+	}
 
-  @keyframes sheet-close {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
+	@keyframes sheet-close {
+		0% {
+			transform: translateX(0%);
+		}
+		100% {
+			transform: translateX(100%);
+		}
+	}
 
-  .animate-sheet-open {
-    animation: sheet-open 300ms ease-out forwards;
-  }
+	.animate-sheet-open {
+		animation: sheet-open 300ms ease-out forwards;
+	}
 
-  .animate-sheet-close {
-    animation: sheet-close 300ms ease-in forwards;
-  }
+	.animate-sheet-close {
+		animation: sheet-close 300ms ease-in forwards;
+	}
 
 	@keyframes accordion-down {
-  from {
-    height: 0;
-    opacity: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-    opacity: 1;
-  }
-}
+		from {
+			height: 0;
+			opacity: 0;
+		}
+		to {
+			height: var(--radix-accordion-content-height);
+			opacity: 1;
+		}
+	}
 
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-    opacity: 1;
-  }
-  to {
-    height: 0;
-    opacity: 0;
-  }
-}
+	@keyframes accordion-up {
+		from {
+			height: var(--radix-accordion-content-height);
+			opacity: 1;
+		}
+		to {
+			height: 0;
+			opacity: 0;
+		}
+	}
 
-.animate-accordion-down {
-  animation: accordion-down 300ms ease-out;
-}
+	.animate-accordion-down {
+		animation: accordion-down 300ms ease-out;
+	}
 
-.animate-accordion-up {
-  animation: accordion-up 300ms ease-out;
-}
+	.animate-accordion-up {
+		animation: accordion-up 300ms ease-out;
+	}
 
-/* Additional smooth transition for better UX */
-[data-radix-accordion-content] {
-  transition: height 300ms ease-out, opacity 300ms ease-out;
-}
+	/* Additional smooth transition for better UX */
+	[data-radix-accordion-content] {
+		transition: height 300ms ease-out, opacity 300ms ease-out;
+	}
 
-/* Ensure proper overflow handling during animation */
-[data-radix-accordion-content][data-state="open"] {
-  animation: accordion-down 300ms ease-out;
-}
+	/* Ensure proper overflow handling during animation */
+	[data-radix-accordion-content][data-state='open'] {
+		animation: accordion-down 300ms ease-out;
+	}
 
-[data-radix-accordion-content][data-state="closed"] {
-  animation: accordion-up 300ms ease-out;
-}
-
+	[data-radix-accordion-content][data-state='closed'] {
+		animation: accordion-up 300ms ease-out;
+	}
 }

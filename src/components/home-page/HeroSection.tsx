@@ -3,7 +3,12 @@ import { cn } from '@/lib/utils';
 import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Autoplay } from 'swiper/modules';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import {
+	motion,
+	useScroll,
+	useTransform,
+	AnimatePresence,
+} from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -54,8 +59,8 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 		if (!carouselImages?.length) return;
 
 		const interval = setInterval(() => {
-			setCurrentImageIndex(prev => (prev + 1) % carouselImages.length);
-		}, 10000); // Change image every 10 seconds
+			setCurrentImageIndex(prev => (prev + 1) % carouselImages?.length);
+		}, 5000); // Change image every 10 seconds
 
 		return () => clearInterval(interval);
 	}, [carouselImages]);
@@ -115,16 +120,18 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 		<motion.section
 			ref={ref}
 			className={cn(
-				'h-[125vh] bg-[#0d0d0d] flex border-secondary relative overflow-hidden', // Increased to 150vh for larger hero
+				'h-[125vh] bg-[#ebebeb] flex  relative overflow-hidden', // Increased to 150vh for larger hero
 				'parallax-container hardware-accelerated',
 				className
 			)}
-			style={{ y }}>
+			style={{ y }}
+		>
 			{/* Custom Video-like Image Carousel */}
 			<div>
 				<motion.div
 					className='absolute inset-0 z-0 parallax-element enhanced-parallax overflow-hidden'
-					style={{ y: backgroundY }}>
+					style={{ y: backgroundY }}
+				>
 					<div className='relative w-full h-[140vh] bg-[#0d0d0d]'>
 						{/* Static background image to prevent flash */}
 						{carouselImages && carouselImages[0] && (
@@ -136,9 +143,7 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 							/>
 						)}
 
-						<AnimatePresence
-							mode='wait'
-							initial={false}>
+						<AnimatePresence mode='wait' initial={false}>
 							{carouselImages && carouselImages[currentImageIndex] && (
 								<motion.div
 									key={currentImageIndex}
@@ -147,7 +152,8 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 									initial='enter'
 									animate='center'
 									exit='exit'
-									className='absolute inset-0 w-full h-full'>
+									className='absolute inset-0 w-full h-full'
+								>
 									{/* Background fallback to prevent black flash */}
 									<div className='absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 to-black' />
 
@@ -220,7 +226,8 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 			{/* Content */}
 			<motion.div
 				className='relative z-20 w-full min-h-[100vh] parallax-element enhanced-parallax' // Increased content area height
-				style={{ y: contentY }}>
+				style={{ y: contentY }}
+			>
 				<HeroContent textScale={textScale} />
 			</motion.div>
 		</motion.section>

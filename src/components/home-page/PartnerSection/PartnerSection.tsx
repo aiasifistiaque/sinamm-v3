@@ -2,8 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionIntro from '@/components/ui/SectionIntro';
-import BorderBottom from '@/components/ui/BorderBottom';
-import ViewAllLink from '@/components/ui/ViewAllLink';
 import Container from '../Container';
 import Flex from '../Flex';
 import Column from '../Column';
@@ -78,7 +76,7 @@ const PartnerSection = ({ data: allClients }: any) => {
 						/> */}
 					{/* </Flex> */}
 					<img
-						src='/ruppur.jpeg'
+						src='/partner.jpg'
 						className='h-[40vh] md:h-[90vh] mt-[64px] w-full object-center object-cover'
 					/>
 				</Column>

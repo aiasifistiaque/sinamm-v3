@@ -25,18 +25,19 @@ const ContactPage = () => {
 				<Container>
 					<RootPage
 						headerText='Get in Touch with Sinamm Engineering Limited'
-						headerDescription='Have questions or need more information? Our team is here to help. Get in touch with us today.'>
+						headerDescription='Have questions or need more information? Our team is here to help. Get in touch with us today.'
+					>
 						<div className='space-y-5'>
 							<div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
 								<div className='max-w-3xl mx-auto text-left '>
 									<ContactInfo />
 								</div>
-								<div className='max-w-3xl  flex justify-center'>
+								<div className='max-w-3xl h-[500px] flex justify-center items-center'>
 									{/* <ContactForm /> */}
 									<img
-										src='/kodda.jpg'
+										src='/contactpage.jpg'
 										alt='contact'
-										className='w-full  h-full items-start m-auto'
+										className='w-full object-cover h-full items-start m-auto'
 									/>
 								</div>
 							</div>
@@ -51,7 +52,8 @@ const ContactPage = () => {
 										allowFullScreen
 										loading='lazy'
 										referrerPolicy='no-referrer-when-downgrade'
-										title='Sinamm Engineering Location'></iframe>
+										title='Sinamm Engineering Location'
+									></iframe>
 								</div>
 							</div>
 						</div>
