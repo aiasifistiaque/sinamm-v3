@@ -65,11 +65,11 @@ const FooterLeft = () => {
 			<div>
 				<h4 className='text-lg font-semibold text-white font-primary mb-4'>QUICK LINKS</h4>
 				<div className='grid grid-cols-2 gap-8'>
-					{columns.map((column, index) => (
+					{columns?.map((column, index) => (
 						<ul
 							key={index}
 							className='space-y-6'>
-							{column.map((link: any) => (
+							{column?.map((link: any) => (
 								<li key={link.href}>
 									<Link
 										href={link?.href || '/'}

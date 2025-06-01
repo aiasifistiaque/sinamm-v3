@@ -77,7 +77,6 @@
 		{ "name": "Machinery", "href": "/machinery" },
 		{ "name": "Media", "href": "/media" },
 		{ "name": "Certificates", "href": "/certificates" },
-		{ "name": "Services", "href": "/services" },
 		{ "name": "Partners", "href": "/clients" },
 		{ "name": "Privacy Policy", "href": "/privacy-policy" }
 	],
