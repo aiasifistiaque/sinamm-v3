@@ -4,15 +4,12 @@ import { getMachineries, getMachineryCategoies } from '@/store/ssr';
 import { Metadata } from 'next';
 import React from 'react';
 
-export async function generateMetadata(
-	{ params }: any,
-	parent: any
-): Promise<Metadata> {
+export async function generateMetadata({ params }: any, parent: any): Promise<Metadata> {
 	// Check if data exists before using it
 	const title = 'SINAMM ENGINEERING LIMITED';
 	const description =
 		'Explore the advanced construction machinery and equipment used by SINAMM ENGINEERING LIMITED. Our modern fleet ensures efficiency, precision, and safety across all building projects in Bangladesh.';
-	const image = '/seo-image.jpg';
+	const image = '/seo-image.png';
 
 	return {
 		title,

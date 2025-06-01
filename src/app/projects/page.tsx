@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: any, parent: any): Promise<Me
 	const title = 'SINAMM ENGINEERING LIMITED';
 	const description =
 		'Explore projects by SINAMM ENGINEERING LIMITED, a trusted construction company based in Dhaka. Specializing in building construction, Sinamm delivers high-quality infrastructure solutions across Bangladesh. For inquiries, you can contact at +88-02-55029316 to 21.';
-	const image = '/seo-image.jpg';
+	const image = '/seo-image.png';
 
 	return {
 		title,

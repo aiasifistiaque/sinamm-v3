@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: any, parent: any): Promise<Me
 	const title = 'SINAMM ENGINEERING LIMITED';
 	const description =
 		'SINAMM ENGINEERING LIMITED is based in Dhaka, within the Dhaka Division. The company operates in the building construction industry. For inquiries, you can contact them at +88-02-55029316 to 21.';
-	const image = '/seo-image.jpg';
+	const image = '/seo-image.png';
 	//heelo
 	return {
 		title,

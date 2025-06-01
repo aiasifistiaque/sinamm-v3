@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: any, parent: any): Promise<Me
 	const title = 'Team | SINAMM ENGINEERING LIMITED';
 	const description =
 		'SINAMM ENGINEERING LIMITED believes in teamwork. We feel proud to have a very strong team and we are confident to achieve our goals and objectives with accuracy. We are dedicated to provide the most efficient and effective skills in the Country. We are working continuously to improve our system to provide best and efficient services to our clients and also to match with the upcoming days.';
-	const image = '/seo-image.jpg';
+	const image = '/seo-image.png';
 	//pulled fm joyant
 	return {
 		title,

@@ -3,15 +3,12 @@ import { ScrollContainer } from '@/components/smooth-scroll';
 import { getPartners } from '@/store/ssr';
 import { Metadata } from 'next';
 import React from 'react';
-export async function generateMetadata(
-	{ params }: any,
-	parent: any
-): Promise<Metadata> {
+export async function generateMetadata({ params }: any, parent: any): Promise<Metadata> {
 	// Check if data exists before using it
 	const title = 'SINAMM ENGINEERING LIMITED';
 	const description =
 		'Discover the valued clients of SINAMM ENGINEERING LIMITED. We are proud to work with leading organizations across Bangladesh, delivering reliable and high-quality construction solutions tailored to their needs.';
-	const image = '/seo-image.jpg';
+	const image = '/seo-image.png';
 
 	return {
 		title,
