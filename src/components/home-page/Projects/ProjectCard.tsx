@@ -224,16 +224,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 									<motion.div
 										className='grid grid-cols-2 gap-4'
 										animate={detailsControls}>
-										{/* Duration */}
-										{project?.duration && (
+										
+										{/* loaction */}
+										{project?.location && (
 											<motion.div
 												className='space-y-1'
-												custom={0}
+												custom={1}
 												animate={gridItemControls}>
 												<h4 className='text-xs font-semibold text-gray-500 uppercase tracking-wide'>
-													Duration
+													Location
 												</h4>
-												<p className='text-sm text-mainText font-medium'>{project?.duration}</p>
+												<p className='text-sm text-mainText font-medium'>{project?.location}</p>
 											</motion.div>
 										)}
 
@@ -247,6 +248,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 													Client
 												</h4>
 												<p className='text-sm text-mainText font-medium'>{project?.client}</p>
+											</motion.div>
+										)}
+										{/* Duration */}
+										{project?.duration && (
+											<motion.div
+												className='space-y-1'
+												custom={0}
+												animate={gridItemControls}>
+												<h4 className='text-xs font-semibold text-gray-500 uppercase tracking-wide'>
+													Duration
+												</h4>
+												<p className='text-sm text-mainText font-medium'>{project?.duration}</p>
 											</motion.div>
 										)}
 
