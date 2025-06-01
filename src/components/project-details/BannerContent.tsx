@@ -2,17 +2,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Badge } from '../ui/badge';
 
 const BannerContent = ({ data: project }: any) => {
-	console.log('project id data:', project);
 	return (
 		<div className='text-white'>
 			<div className='flex items-center mb-4'>
 				<Link
 					href='/projects'
-					className='text-white/80 hover:text-white flex items-center'
-				>
+					className='text-white/80 hover:text-white flex items-center'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						width='24'
@@ -23,8 +20,7 @@ const BannerContent = ({ data: project }: any) => {
 						strokeWidth='2'
 						strokeLinecap='round'
 						strokeLinejoin='round'
-						className='h-4 w-4 mr-2'
-					>
+						className='h-4 w-4 mr-2'>
 						<path d='m15 18-6-6 6-6'></path>
 					</svg>
 					Back to Projects
@@ -34,8 +30,7 @@ const BannerContent = ({ data: project }: any) => {
 				className='text-2xl md:text-4xl lg:text-6xl font-bold mb-4 mt-8 md:w-[80vw] xl:w-[65vw] lg:leading-[60px]'
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5 }}
-			>
+				transition={{ duration: 0.5 }}>
 				{project?.name}
 			</motion.h1>
 			<p className='text-textWhite mb-4'>{project?.location}</p>
@@ -43,16 +38,14 @@ const BannerContent = ({ data: project }: any) => {
 				className='flex flex-wrap items-center gap-2 mb-6'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
-				transition={{ duration: 0.5, delay: 0.2 }}
-			>
+				transition={{ duration: 0.5, delay: 0.2 }}>
 				<Link href={`/projects?type=${project?.projectStatus}`}>
 					<span
 						className={`px-4 py-[4px] text-xs rounded-full ${
 							project?.projectStatus === 'ongoing'
 								? 'bg-blue-100 text-blue-900'
 								: 'bg-green-100 text-green-800'
-						}`}
-					>
+						}`}>
 						{project?.projectStatus === 'ongoing' ? 'Ongoing' : 'Completed'}
 					</span>
 				</Link>

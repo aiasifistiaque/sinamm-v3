@@ -38,6 +38,6 @@ export async function getMedias(sort: any = '-publishedDate') {
 	}
 
 	const data = await res.json();
-	console.log('news sorted ssr data:', data);
+
 	return data; // Expected format: { doc: [...] }
 }

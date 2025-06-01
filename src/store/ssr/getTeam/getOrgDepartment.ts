@@ -10,8 +10,6 @@ export async function getOrgDepartments() {
 		limit: 999,
 	};
 	const params = new URLSearchParams({});
-	// console.log('project params::', params);
-	// console.log('type val:', type);
 
 	Object.entries(filters).forEach(([key, value]) => {
 		params.append(key, value?.toString()); // Flattened filters (e.g., show=true)
@@ -28,7 +26,6 @@ export async function getOrgDepartments() {
 	}
 
 	const api = `${BASE_URL}/department-categories?${params.toString()}`;
-	// console.log('Fetching banners from:', api); // Debug URL
 
 	const res = await fetch(api, {
 		next: { revalidate: 60 }, // ISR with 60-second revalidation

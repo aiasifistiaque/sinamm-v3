@@ -40,11 +40,6 @@ export async function getHomeProject() {
 	}
 
 	const data = await res.json();
-	// console.log('projects ssr data:', data);
+
 	return data; // Expected format: { doc: [...] }
 }
-
-// In SSR function
-// Object.entries(filters).forEach(([key, value]) => {
-//   params.append(key, value.toString());
-// });

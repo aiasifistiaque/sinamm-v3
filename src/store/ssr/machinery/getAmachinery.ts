@@ -23,8 +23,6 @@ export async function getAmachinery(id: string) {
 	}
 
 	const api = `${BASE_URL}/machineries/${id}`;
-	// console.log('Fetching products from:', api); // Debug URL
-	// console.log('Headers:', headers); // Debug headers
 
 	const res = await fetch(api, {
 		next: { revalidate: 60 },
@@ -32,9 +30,7 @@ export async function getAmachinery(id: string) {
 	});
 
 	if (!res.ok) {
-		console.error(
-			`Failed to fetch products for categories: ${id}, Status: ${res.status}`
-		);
+		console.error(`Failed to fetch products for categories: ${id}, Status: ${res.status}`);
 		const errorText = await res.text();
 		console.error('Error response:', errorText);
 		return { doc: [] }; // Return empty array to prevent crashes

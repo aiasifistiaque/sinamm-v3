@@ -10,8 +10,6 @@ export async function getCertificates() {
 		limit: 10,
 	};
 	const params = new URLSearchParams({});
-	// console.log('project params::', params);
-	// console.log('type val:', type);
 
 	Object.entries(filters).forEach(([key, value]) => {
 		params.append(key, value?.toString()); // Flattened filters (e.g., show=true)

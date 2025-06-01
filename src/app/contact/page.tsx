@@ -15,18 +15,14 @@ const ContactPage = () => {
 	const { data, isLoading } = useGetAllQuery({
 		path: 'contacts',
 	});
-	// const isLoading = isFetching
-	// const locationUrl = data?.doc?.[0]?.location || '';
 
-	// console.log('contact', data);
 	return (
 		<ScrollContainer>
 			<RootLayout isLoading={isLoading}>
 				<Container>
 					<RootPage
 						headerText='Get in Touch with Sinamm Engineering Limited'
-						headerDescription='Have questions or need more information? Our team is here to help. Get in touch with us today.'
-					>
+						headerDescription='Have questions or need more information? Our team is here to help. Get in touch with us today.'>
 						<div className='space-y-5'>
 							<div className='grid grid-cols-1 lg:grid-cols-2 gap-16'>
 								<div className='max-w-3xl mx-auto text-left '>
@@ -52,8 +48,7 @@ const ContactPage = () => {
 										allowFullScreen
 										loading='lazy'
 										referrerPolicy='no-referrer-when-downgrade'
-										title='Sinamm Engineering Location'
-									></iframe>
+										title='Sinamm Engineering Location'></iframe>
 								</div>
 							</div>
 						</div>

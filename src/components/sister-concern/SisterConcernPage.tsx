@@ -26,8 +26,7 @@ const SisterConcernPage = () => {
 			id: '1',
 			name: 'CIRCLE HOLDINGS LIMITED',
 			description: 'A Real Estate Company',
-			address:
-				'House # 57/C (2nd Floor), Road # 15/A, Dhanmondi R/A, Dhaka – 1209',
+			address: 'House # 57/C (2nd Floor), Road # 15/A, Dhanmondi R/A, Dhaka – 1209',
 			phone: '02-8127192, 8130752 Ex 604',
 			fax: '02-9120361',
 			email: 'jsecon@gmail.com',
@@ -37,8 +36,7 @@ const SisterConcernPage = () => {
 			id: '2',
 			name: 'JSE CONSORTIUM',
 			description: 'An Organization for Tele Communication Sector Works',
-			address:
-				'House # 57/C (Ground Floor), Road # 15/A, Dhanmondi R/A, Dhaka – 1209',
+			address: 'House # 57/C (Ground Floor), Road # 15/A, Dhanmondi R/A, Dhaka – 1209',
 			phone: '02-8127192, 8130752 Ex 604',
 			fax: '02-9120361',
 			email: 'jsecon@gmail.com',
@@ -68,9 +66,7 @@ const SisterConcernPage = () => {
 		// Map sisterConcerns to new array with updated IDs
 		return sisterConcerns?.map((concern, index) => {
 			// Try to find matching department by name
-			const matchingDepartment = departmentData?.find(
-				dept => dept?.name == concern?.name
-			);
+			const matchingDepartment = departmentData?.find(dept => dept?.name == concern?.name);
 
 			if (matchingDepartment) {
 				// console.log('matched dep:', matchingDepartment);
@@ -97,11 +93,8 @@ const SisterConcernPage = () => {
 		}, 2000);
 	}, []);
 
-	console.log("sisi", data)
-
 	return (
 		<RootLayout isLoading={isLoading}>
-
 			<SisterConcerRootPage>
 				<UpperSection />
 				<BorderBottom />
@@ -111,15 +104,14 @@ const SisterConcernPage = () => {
 				<BorderBottom />
 				{/* <WhyCircleHoldings /> */}
 			</SisterConcerRootPage>
-			
 		</RootLayout>
 	);
 };
 
 export default SisterConcernPage;
 
-
-{/* <RootPage
+{
+	/* <RootPage
 				headerText='Sister Concerns'
 				headerDescription='Explore the affiliated companies and subsidiaries that work alongside us to deliver comprehensive solutions across various industries.'
 			>
@@ -186,4 +178,5 @@ export default SisterConcernPage;
 						))}
 					</div>
 				</div>
-			</RootPage> */}
+			</RootPage> */
+}

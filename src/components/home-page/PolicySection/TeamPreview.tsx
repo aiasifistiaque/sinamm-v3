@@ -3,7 +3,6 @@ import React from 'react';
 import { useGetAllQuery } from '@/store/services/commonApi';
 import Column from '../Column';
 import Flex from '../Flex';
-import Container from '../Container';
 
 const TeamPreview = () => {
 	const { data } = useGetAllQuery({
@@ -15,10 +14,11 @@ const TeamPreview = () => {
 		},
 	});
 	const allImages = data?.doc?.flatMap((item: any) => item?.images || []) || [];
-	// console.log('all images:::', )
-	// latest
-	// Double the images for seamless looping
-	const repeatedImages = [...allImages, ...allImages];
+	
+	// Split images into two groups for different marquees
+	const midPoint = Math.ceil(allImages.length / 2);
+	const firstGroupImages = allImages.slice(0, midPoint);
+	const secondGroupImages = allImages.slice(midPoint);
 
 	//
 	return (
@@ -29,25 +29,20 @@ const TeamPreview = () => {
 				<div
 					className='animate-marquee-mobile md:animate-marquee-desktop-reverse flex items-center gap-x-[2px] whitespace-nowrap'
 					style={{
-						width: `${allImages?.length * 1000}px`,
+						width: `${firstGroupImages?.length * 1000}px`,
 						willChange: 'transform',
-					}}
-				>
-					{repeatedImages?.map(
-						(image: any, index: number) =>
-							index < 5 && (
-								<div
-									key={index}
-									className='bg-[#0d0d0d] w-[300px] lg:w-[600px] h-full rounded-card overflow-hidden'
-								>
-									<img
-										src={image}
-										alt={`image-${index}`}
-										className='z-2 w-full h-full object-cover rounded-card'
-									/>
-								</div>
-							)
-					)}
+					}}>
+					{firstGroupImages?.map((image: any, index: number) => (
+						<div
+							key={`first-${index}`}
+							className='bg-[#0d0d0d] w-[300px] lg:w-[600px] h-full rounded-card overflow-hidden'>
+							<img
+								src={image}
+								alt={`first-group-image-${index}`}
+								className='z-2 w-full h-full object-cover rounded-card'
+							/>
+						</div>
+					))}
 				</div>
 			</Flex>
 
@@ -56,25 +51,20 @@ const TeamPreview = () => {
 				<div
 					className='animate-marquee-mobile-reverse md:animate-marquee-desktop-reverse flex items-center gap-x-[2px] whitespace-nowrap'
 					style={{
-						width: `${allImages?.length * 1000}px`,
+						width: `${secondGroupImages?.length * 1000}px`,
 						willChange: 'transform',
-					}}
-				>
-					{repeatedImages?.map(
-						(image: any, index: number) =>
-							index > 5 && (
-								<div
-									key={index}
-									className='bg-[#0d0d0d] w-[300px] lg:w-[600px] h-full rounded-card overflow-hidden'
-								>
-									<img
-										src={image}
-										alt={`image-${index}`}
-										className='z-2 w-full h-full object-cover rounded-card'
-									/>
-								</div>
-							)
-					)}
+					}}>
+					{secondGroupImages?.map((image: any, index: number) => (
+						<div
+							key={`second-${index}`}
+							className='bg-[#0d0d0d] w-[300px] lg:w-[600px] h-full rounded-card overflow-hidden'>
+							<img
+								src={image}
+								alt={`second-group-image-${index}`}
+								className='z-2 w-full h-full object-cover rounded-card'
+							/>
+						</div>
+					))}
 				</div>
 			</Flex>
 		</Column>

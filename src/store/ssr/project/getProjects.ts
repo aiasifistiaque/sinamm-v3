@@ -4,8 +4,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_BACKEND;
 export async function getProjects(type: string = 'all', category?: string) {
 	const filters: Record<string, string | boolean | number> = {
 		projectStatus: type === 'all' ? '' : type,
+		status: 'published',
 		sort: '-priority',
-		// isSisterConcern: false,
 		limit: 9999,
 	};
 
@@ -19,8 +19,7 @@ export async function getProjects(type: string = 'all', category?: string) {
 			params.append(key, value.toString());
 		}
 	});
-	// console.log('params ::', params);
-	// console.log('params string::', params?.toString());
+
 	const token = process.env.NEXT_PUBLIC_TOKEN;
 	const headers: Record<string, string> = {
 		'Content-Type': 'application/json',
@@ -31,7 +30,6 @@ export async function getProjects(type: string = 'all', category?: string) {
 	}
 
 	const api = `${BASE_URL}/projects?${params.toString()}`;
-	//   console.log('Fetching projects from:', api); // Debug URL
 
 	try {
 		const res = await fetch(api, {

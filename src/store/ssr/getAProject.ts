@@ -32,15 +32,13 @@ export async function getAproject(id: string) {
 	});
 
 	if (!res.ok) {
-		console.error(
-			`Failed to fetch products for categories: ${id}, Status: ${res.status}`
-		);
+		console.error(`Failed to fetch products for categories: ${id}, Status: ${res.status}`);
 		const errorText = await res.text();
 		console.error('Error response:', errorText);
 		return { doc: [] }; // Return empty array to prevent crashes
 	}
 
 	const data = await res.json();
-	console.log('get a project response:', data); // Debug response
+
 	return data; // Ensure response matches { doc: [...] }
 }

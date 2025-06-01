@@ -23,8 +23,6 @@ export async function getProjectGalleries(id: string) {
 	}
 
 	const api = `${BASE_URL}/project-galleries/${id}`;
-	// console.log('Fetching products from:', api); // Debug URL
-	// console.log('Headers:', headers); // Debug headers
 
 	const res = await fetch(api, {
 		next: { revalidate: 60 },
@@ -32,15 +30,13 @@ export async function getProjectGalleries(id: string) {
 	});
 
 	if (!res.ok) {
-		console.error(
-			`Failed to fetch products for categories: ${id}, Status: ${res.status}`
-		);
+		console.error(`Failed to fetch products for categories: ${id}, Status: ${res.status}`);
 		const errorText = await res.text();
 		console.error('Error response:', errorText);
 		return { doc: [] }; // Return empty array to prevent crashes
 	}
 
 	const data = await res.json();
-	// console.log('get project-galleries:', data); // Debug response
+
 	return data; // Ensure response matches { doc: [...] }
 }
