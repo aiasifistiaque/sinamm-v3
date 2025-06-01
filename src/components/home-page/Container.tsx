@@ -22,7 +22,7 @@ const Container: React.FC<ContainerProps> = ({
 			className={cn(
 				'w-full',
 				// !noPadding && 'px-4 lg:px-12',
-				!noPadding && 'px-3 md:px-12',
+				!noPadding && 'px-3 md:px-4',
 
 				'mx-auto',
 				className
