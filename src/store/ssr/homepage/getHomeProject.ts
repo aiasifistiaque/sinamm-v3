@@ -4,6 +4,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BACKEND;
 
 export async function getHomeProject() {
 	const filters = {
+		sort: '-featuredPriority',
 		isFeatured: true,
 		limit: 6,
 	};
