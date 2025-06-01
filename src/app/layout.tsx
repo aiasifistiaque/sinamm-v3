@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 	title: 'SINAMM ENGINEERING LIMITED',
 	description:
 		'SINAMM ENGINEERING LIMITED is based in Dhaka, within the Dhaka Division. The company operates in the building construction industry. For inquiries, you can contact them at +88-02-55029316 to 21.',
-	icons: '/seo-image.jpg',
+	icons: '/seo-image.png',
 };
 
 export default function Layout({
