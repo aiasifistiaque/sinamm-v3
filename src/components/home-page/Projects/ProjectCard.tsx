@@ -180,6 +180,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 									{project?.location}
 								</motion.p> */}
 								<motion.div
+									className='space-x-1'
 									animate={{ opacity: 1 }}
 									transition={{
 										delay: 0.1,
@@ -187,6 +188,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 									}}>
 									<span className='px-2 border-[.5px] border-b-[2px] border-mainText py-1 text-xs rounded-[2px] bg-[whitesmoke] uppercase font-medium text-mainText'>
 										Work value: {project?.workValue}
+									</span>
+									<span className='px-2 border-[.5px] border-b-[2px] border-mainText py-1 text-xs rounded-[2px] bg-[whitesmoke] uppercase font-medium text-mainText'>
+										{project?.projectStatus}
 									</span>
 								</motion.div>
 							</motion.div>
