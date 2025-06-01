@@ -40,7 +40,7 @@ const LeftNavbar = () => {
 						<img
 							src={logo.url}
 							alt={logo.alt}
-							className='md:h-12 h-7 object-contain drop-shadow-sm'
+							className='md:h-9 mt-2 h-7 object-contain drop-shadow-sm'
 						/>
 					)}
 				</Link>

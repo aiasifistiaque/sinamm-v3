@@ -30,19 +30,19 @@ const TeamPage = ({ data, chartData }: any) => {
 					headerText='Meet Our Top Management of SINAMM Engineering'
 					headerDescription='SINAMM Engineering Limited believes in teamwork. We feel proud to have a very strong team and we are confident to achieve our goals and objectives with accuracy. We are dedicated to provide the most efficient and effective skills in the Country. We are working continuously to improve our system to provide best and efficient services to our clients and also to match with the upcoming days.'>
 					{/* team section */}
-					<div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 md:px-1'>
+					<div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-[2px] md:px-1'>
 						{topManagement?.map((member: any) => (
-							<Card
+							<Column
 								key={member?._id}
 								className='border-none h-full grow'>
-								<div className='relative aspect-[3/4]'>
+								<div className=' aspect-[3/4]'>
 									<img
 										src={member?.image}
 										alt={member?.name}
 										className='w-full h-full object-cover'
 									/>
 								</div>
-								<CardContent className='py-2 px-2 space-y-3 bg-[white]'>
+								<CardContent className='py-2 px-2 space-y-3 h-full bg-[white]'>
 									<h3 className='text-[22px] font-semibold uppercase font-primary text-mainText'>
 										{member?.name}
 									</h3>
@@ -53,7 +53,7 @@ const TeamPage = ({ data, chartData }: any) => {
 										{member?.details && parser(member.details)}
 									</p>
 								</CardContent>
-							</Card>
+							</Column>
 						))}
 					</div>
 

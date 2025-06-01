@@ -37,9 +37,9 @@ const MachinaryPage = ({ data, categories }: any) => {
 		setCategoryTab(filter); // Update the active filter
 	};
 
-	const handleClick = (id: any) => {
-		router.push(`/machinery/${id}`);
-	};
+	// const handleClick = (id: any) => {
+	// 	router.push(`/machinery/${id}`);
+	// };
 
 	return (
 		<RootLayout>
@@ -59,8 +59,9 @@ const MachinaryPage = ({ data, categories }: any) => {
 							{data?.map((item: any, i: number) => (
 								<div
 									key={i}
-									onClick={() => handleClick(item?._id)}>
-									<Card className='border-gray-100 bg-cardBg overflow-hidden cursor-pointer'>
+									// onClick={() => handleClick(item?._id)}
+								>
+									<Card className='border-gray-100 bg-cardBg overflow-hidden'>
 										<Carousel className='w-full'>
 											<CarouselContent>
 												{item?.mediaImages?.map((image: any, index: number) => (
