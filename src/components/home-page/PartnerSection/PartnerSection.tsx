@@ -2,8 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionIntro from '@/components/ui/SectionIntro';
-import BorderBottom from '@/components/ui/BorderBottom';
-import ViewAllLink from '@/components/ui/ViewAllLink';
 import Container from '../Container';
 import Flex from '../Flex';
 import Column from '../Column';
