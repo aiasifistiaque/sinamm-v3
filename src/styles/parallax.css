@@ -1,0 +1,89 @@
+/* Enhanced Parallax Effects */
+.parallax-container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.parallax-element {
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Smooth scrolling optimization */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for better performance */
+.hardware-accelerated {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+}
+
+/* Enhanced motion effects */
+@media (prefers-reduced-motion: no-preference) {
+  .enhanced-parallax {
+    transition: transform 0.1s ease-out;
+  }
+}
+
+/* Disable parallax for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .enhanced-parallax {
+    transform: none !important;
+  }
+}
+
+/* Swiper fade effect dark background */
+.swiper-wrapper {
+  background-color: #0d0d0d !important;
+}
+
+.swiper-slide {
+  background-color: #0d0d0d !important;
+}
+
+/* Fix fade effect transition background */
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+  background-color: #0d0d0d !important;
+}
+
+.swiper-fade .swiper-slide .swiper-slide-active {
+  pointer-events: auto;
+}
+
+/* Ensure no white background during transitions */
+.swiper-container {
+  background-color: #0d0d0d !important;
+}
+
+/* Hero section specific swiper styling */
+.hero-swiper {
+  background-color: #0d0d0d !important;
+}
+
+.hero-swiper .swiper-wrapper {
+  background-color: #0d0d0d !important;
+}
+
+.hero-swiper .swiper-slide {
+  background-color: #0d0d0d !important;
+}
+
+/* Ensure smooth transitions without white flashes */
+.hero-swiper.swiper-fade .swiper-slide {
+  opacity: 0;
+  transition-property: opacity;
+  background-color: #0d0d0d !important;
+}
+
+.hero-swiper.swiper-fade .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}

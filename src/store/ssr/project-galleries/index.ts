@@ -1,0 +1,1 @@
+export { getProjectGalleries } from './getProjectGalleries';

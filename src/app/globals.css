@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Noto+Color+Emoji&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+	--color-textWhite: #f2f2f2;
+	--color-blueBg: #074d87;
+	--color-textBlue: #004ab3;
+	--color-textHover: #1447e6;
+	--color-blueBgNew: #1c398e;
+	--color-secondary: #074d87;
+	/* --color-mainBg: #faf8f1; */
+	--color-mainBg: #f2f2f2;
+	/* --color-cardBg: rgb(233, 231, 221); */
+	--color-cardBg: #FFFFFF;
+	--color-button-border: #e9e7dd;
+	--color-mainText: #1e2939;
+	--color-paraText: #567b7a;
+	/* --color-buttonBorder: #e9e7dd; */
+	--color-primayBg: #074d87;
+	--color-paratext: #567b7a;
+	--color-buttonHover: #e7eaee;
+	--color-bgGreen: ;
+	--color-bgAmber: ;
+	--font-primary: 'Inter Tight', sans-serif;
+	--font-secondary: 'Inter Tight', sans-serif;
+}
+/* font-family: "Inter Tight", sans-serif; */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	/* --color-mainText: #0d0d0d; */
+	
+}
+.line-badge {
+	
+	position: relative;
+}
+
+/* .container{
+	margin: 0 auto;
+	background-color:red;
+	display:flex;
+	width:'100%';
+	flex:1;
+	padding:0px;
+
+} */
+ .destext {
+	font-size: 16px;
+ }
+
+.line-badge::after {
+	content: '';
+	position: absolute;
+	left: 0%;
+	top: -4px;
+	bottom: 0;
+	max-width: 1200px;
+	width: 100%;
+	background-color: rgba(29, 31, 31, 0.6);
+	border-top: 4px solid #fdffd9;
+	z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+	.line-badge::after {
+		left: 0%;
+		width: 100%;
+	}
+}
+.project-card {
+	transition: all 0.3s ease;
+}
+
+/* .button-border {
+	border-color: #e9e7dd;
+} */
+
+.rounded-card {
+	border-radius: 0;
+}
+
+.section-header {
+	@apply pt-28 pb-16;
+}
+/* li span {
+	font-size: 8px;
+} */
+
+@keyframes marquee-mobile {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes marquee-desktop {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-marquee-mobile {
+	animation: marquee-mobile 120s linear infinite;
+	will-change: transform;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+.animate-marquee-desktop {
+	animation: marquee-desktop 240s linear infinite;
+	will-change: transform;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+/* ObjektivMk2_Trial_Md.ttf */
+@font-face {
+	font-family: 'Objektiv';
+	src: url('/fonts/ObjektivMk2_Trial_Lt.ttf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* @font-face {
+	font-family: 'Objektiv';
+	src: url('/fonts/ObjektivMk2_Trial_Rg.ttf')
+		format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+} */
+
+@font-face {
+	font-family: 'Tobias';
+	src: url('/fonts/tobias-font/TobiasTRIAL-Medium-BF6719af6e0f214.otf')
+		format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Tobias';
+	src: url('/fonts/tobias-font/TobiasTRIAL-SemiBold-BF6719af6d74d2b.otf')
+		format('opentype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+.animate-marquee-mobile-reverse {
+	animation: marquee-mobile 120s linear infinite reverse;
+	will-change: transform;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+.animate-marquee-desktop-reverse {
+	animation: marquee-desktop 240s linear infinite reverse;
+	will-change: transform;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+}
+
+
+@layer utilities {
+  @keyframes sheet-open {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes sheet-close {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-sheet-open {
+    animation: sheet-open 300ms ease-out forwards;
+  }
+
+  .animate-sheet-close {
+    animation: sheet-close 300ms ease-in forwards;
+  }
+
+	@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 300ms ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 300ms ease-out;
+}
+
+/* Additional smooth transition for better UX */
+[data-radix-accordion-content] {
+  transition: height 300ms ease-out, opacity 300ms ease-out;
+}
+
+/* Ensure proper overflow handling during animation */
+[data-radix-accordion-content][data-state="open"] {
+  animation: accordion-down 300ms ease-out;
+}
+
+[data-radix-accordion-content][data-state="closed"] {
+  animation: accordion-up 300ms ease-out;
+}
+
+}

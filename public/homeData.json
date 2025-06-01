@@ -1,0 +1,382 @@
+{
+	"logo": {
+		"url": "/logo.webp",
+		"alt": "Sinamm Engineering"
+	},
+	"companyInfo": {
+		"name": "SINAMM ENGINEERING",
+		"description": "A leading construction and engineering firm based in Bangladesh, committed to delivering excellence in every project."
+	},
+	"heroSection": {
+		"heroTitle": "Building Tomorrow Today",
+		"heroDescription": "SINAMM ENGINEERING LIMITED named as SINAMM was conceived and formed in the year 2004 by a team of qualified Engineers and other professionals possessing long-standing experience"
+	},
+	"headerImages": [
+		{
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "Modern building architecture"
+		},
+		{
+			"url": "https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a",
+			"alt": "Skyscraper construction"
+		},
+		{
+			"url": "https://images.unsplash.com/photo-1460317442991-0ec209397118",
+			"alt": "Engineering project"
+		}
+	],
+	"navlinks": [
+		{
+			"name": "Home",
+			"href": "/",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "home header"
+		},
+		{
+			"name": "About Us",
+			"href": "/about",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "about header"
+		},
+		{
+			"name": "Team",
+			"href": "/team",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "team header"
+		},
+		{
+			"name": "Projects",
+			"href": "/projects",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "projects header"
+		},
+		{
+			"name": "Machinery",
+			"href": "/machinery",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "machinary header"
+		},
+		{
+			"name": "Media",
+			"href": "/media",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "media Header"
+		},
+		{
+			"name": "Contact",
+			"href": "/contact",
+			"url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+			"alt": "contact header"
+		}
+	],
+	"footlinks": [
+		{ "name": "Home", "href": "/" },
+		{ "name": "About Us", "href": "/about" },
+		{ "name": "Team", "href": "/team" },
+		{ "name": "Projects", "href": "/projects" },
+		{ "name": "Machinery", "href": "/machinery" },
+		{ "name": "Media", "href": "/media" },
+		{ "name": "Certificates", "href": "/certificates" },
+		{ "name": "Sister Concerns", "href": "/sister-concerns" },
+		{ "name": "Services", "href": "/services" },
+		{ "name": "Partners", "href": "/clients" },
+		{ "name": "Privacy Policy", "href": "/privacy-policy" }
+	],
+	"about": {
+		"mission": {
+			"icon": "/mission.png",
+			"title": "Our Mission",
+			"paragraphs": [
+				"To deliver innovative and sustainable engineering solutions that exceed client expectations, improve communities, and set new standards of excellence in the construction industry.",
+				"We are dedicated to creating infrastructure that enhances quality of life, drives economic growth, and respects the environment for future generations."
+			]
+		},
+		"vision": {
+			"icon": "/vision.png",
+			"title": "Our Vision",
+			"paragraphs": [
+				"To be recognized as Bangladesh's premier engineering and construction firm, known for technical excellence, ethical business practices, and transformative projects that shape the future.",
+				"We aspire to be the partner of choice for clients seeking innovative solutions to complex engineering challenges, while fostering a culture of continuous improvement and professional growth."
+			]
+		},
+		"ourCompanySection": {
+			"title": "Our Company",
+			"paragraphs": [
+				"SINAMM ENGINEERING LIMITED, named as SINAMM, was conceived and formed in the year 2004 by a team of qualified Engineers and other professionals possessing long-standing experience in various fields of constructional activities with a vision and mission to play a significant role in the development and construction sector in the near future."
+			],
+			"images": [
+				{
+					"url": "/constructionSite.webp",
+					"alt": "Construction Site"
+				},
+				{
+					"url": "/sinammOffice.webp",
+					"alt": "Sinamm Engineering Office"
+				},
+				{
+					"url": "/engiDesign.webp",
+					"alt": "Engineering Design"
+				}
+			]
+		},
+		"values": {
+			"header": "Our Core Values",
+			"description": "These fundamental principles guide our decisions, shape our culture, and define what we stand for as an organization.",
+			"items": [
+				{
+					"title": "Excellence",
+					"description": "We strive for excellence in everything we do, from engineering design to project execution and client service.",
+					"icon": "/star.png"
+				},
+				{
+					"title": "Integrity",
+					"description": "We maintain the highest ethical standards and transparency in all our business dealings and relationships.",
+					"icon": "/document.png"
+				},
+				{
+					"title": "Innovation",
+					"description": "We embrace innovative thinking and creative solutions to tackle complex engineering challenges.",
+					"icon": "/checkmark.png"
+				},
+				{
+					"title": "Sustainability",
+					"description": "We are committed to environmental responsibility and sustainable construction practices in all our projects.",
+					"icon": "/plus.png"
+				}
+			]
+		},
+		"history": {
+			"title": "Our History",
+			"paragraphs": [
+				"<strong>SINAMM ENGINEERING LIMITED</strong> <em>named as SINAMM was conceived and formed in the year 2004 by a team of qualified Engineers and other professionals possessing long-standing experience in various fields of Constructional activities with a vision and mission and to play a significant role in development and construction sector in near future.</em>",
+				"Construction, more than any industry, is indeed a service-profession, the lure of becoming a civil engineering contractor attracts many, but not all can survive these challenges. Many give up due to a lack of experience or inability to tackle the hazards involved. SINAMM has started the journey to take these challenges and is determined to exist its excellence in the field of construction such as buildings, industry and infrastructure projects through innovative planning and employing the latest techniques with continuous advancement. We believe that our dedication, commitment, technical superiority, experienced human resources, and collective management efforts will ensure quality, accuracy and timely completion of works for the prospective client.",
+				"The top management of SINAMM during the tenure of last 21 years played the key role in the field of construction through Planning, Evaluation, Tendering, Monitoring, Supervision & Execution of industrial building, Power plants, High-rise Apartments, Office buildings, Commercial buildings, Roads and Highways projects, Water supply, Sanitation and Deep tub well projects.",
+				"Finally, keeping pace with rapid economical and technological changes, we are determined to put ourselves in the front line of the Construction sector through our works in future to build a planned, productive and healthier environment around us. SINAMM Engineering Limited believes in teamwork. We feel proud to have a very strong team and we are confident to achieve our goals and objectives with accuracy. We are dedicated to providing the most efficient and effective skills in the Country. We are working continuously to improve our system to provide the best and efficient services to our clients and also to match with the upcoming days."
+			]
+		}
+	},
+	"aboutSection": {
+		"tag": "About Sinamm Engineering",
+		"title": "Building Tomorrow's Infrastructure with Excellence Today",
+		"description": [
+			"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.",
+			"We specialize in infrastructure development, commercial construction, and industrial engineering, with a commitment to sustainable practices and cutting-edge technology. Our mission is to deliver exceptional value to our clients while building structures that stand the test of time."
+		],
+		"features": [
+			{
+				"title": "Quality Assurance",
+				"description": "Highest standards in every project"
+			},
+			{
+				"title": "Expert Team",
+				"description": "Skilled professionals and engineers"
+			},
+			{
+				"title": "Modern Equipment",
+				"description": "Latest technology and machinery"
+			},
+			{
+				"title": "Safety First",
+				"description": "Rigorous safety protocols"
+			}
+		],
+		"buttonText": "Learn More About Us",
+		"buttonLink": "/about"
+	},
+	"statsSection": {
+		"title": "Achieve Real Results",
+		"subtitle": "Representative stats from real subscribers within first year of launch.",
+		"stats": [
+			{
+				"value": "15+",
+				"label": "Year of Experience",
+				"textColor": "text-blue-500",
+				"labelColor": "text-blue-600"
+			},
+			{
+				"value": "120+",
+				"label": "Projects Complete",
+				"textColor": "text-blue-900",
+				"labelColor": "text-blue-900"
+			},
+			{
+				"value": "80+",
+				"label": "Expert Engineers",
+				"textColor": "text-green-700",
+				"labelColor": "text-green-700"
+			},
+			{
+				"value": "25+",
+				"label": "Award Won",
+				"textColor": "text-green-500",
+				"labelColor": "text-green-500"
+			}
+		]
+	},
+	"projects": [
+		{
+			"id": "1",
+			"title": "Central Business District Tower",
+			"image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Commercial Construction",
+			"location": "Dhaka, Bangladesh",
+			"status": "completed",
+			"description": "A 30-story modern commercial tower featuring state-of-the-art office spaces, retail areas, and parking facilities."
+		},
+		{
+			"id": "1",
+			"title": "Riverfront Highway Extension",
+			"image": "https://images.unsplash.com/photo-1545158539-1989c4a61movements.0c256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Infrastructure",
+			"location": "Chittagong, Bangladesh",
+			"status": "ongoing",
+			"description": "A major highway extension project along the riverfront, connecting key industrial and commercial areas."
+		},
+		{
+			"id": "3",
+			"title": "Modern Manufacturing Plant",
+			"image": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Industrial",
+			"location": "Sylhet, Bangladesh",
+			"status": "completed",
+			"description": "A state-of-the-art manufacturing facility built to international standards with sustainable features."
+		},
+		{
+			"id": "4",
+			"title": "Community General Hospital",
+			"image": "https://images.unsplash.com/photo-1626315869431-cfdd75be606a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Healthcare",
+			"location": "Rajshahi, Bangladesh",
+			"status": "ongoing",
+			"description": "A comprehensive healthcare facility designed to serve the local community with modern medical amenities."
+		},
+		{
+			"id": "5",
+			"title": "Luxury Residential Complex",
+			"image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Residential",
+			"location": "Dhaka, Bangladesh",
+			"status": "completed",
+			"description": "An exclusive residential development featuring premium apartments, landscaped gardens, and recreational facilities."
+		},
+		{
+			"id": "6",
+			"title": "Coastal Resort Development",
+			"image": "https://images.unsplash.com/photo-1582719508461-905c673771minimalls.fde8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Hospitality",
+			"location": "Cox's Bazar, Bangladesh",
+			"status": "ongoing",
+			"description": "A luxury beachfront resort with villas, restaurants, and recreational facilities along the stunning coastline."
+		},
+		{
+			"id": "7",
+			"title": "University Campus Expansion",
+			"image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Educational",
+			"location": "Khulna, Bangladesh",
+			"status": "completed",
+			"description": "Expansion of a major university campus with new academic buildings, dormitories, and sports facilities."
+		},
+		{
+			"id": "8",
+			"title": "Solar Power Plant",
+			"image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Energy",
+			"location": "Rangpur, Bangladesh",
+			"status": "ongoing",
+			"description": "A large-scale solar power plant designed to provide clean energy to surrounding communities and industries."
+		},
+		{
+			"id": "9",
+			"title": "Modern Shopping Mall Complex",
+			"image": "https://images.unsplash.com/photo-1567449303078-57ad995bd3movements.0c5fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800",
+			"category": "Commercial",
+			"location": "Dhaka, Bangladesh",
+			"status": "completed",
+			"description": "A contemporary shopping mall with retail spaces, food courts, entertainment zones, and parking facilities."
+		}
+	],
+	"services": [
+		{
+			"icon": "/hammer.png",
+			"title": "Construction Management",
+			"description": "Expert management of construction projects from planning and design through completion, ensuring quality, timeliness, and budget compliance."
+		},
+		{
+			"icon": "/map.png",
+			"title": "Infrastructure Development",
+			"description": "Comprehensive infrastructure solutions including highways, bridges, water systems, and public facilities, built to last generations."
+		},
+		{
+			"icon": "/factory.png",
+			"title": "Industrial Engineering",
+			"description": "Specialized engineering services for industrial facilities, including factories, warehouses, and manufacturing plants."
+		},
+		{
+			"icon": "/structure.png",
+			"title": "Structural Engineering",
+			"description": "Advanced structural design and analysis ensuring buildings are safe, functional, and compliant with all regulations."
+		},
+		{
+			"icon": "/commercial.png",
+			"title": "Commercial Construction",
+			"description": "Full-service commercial construction for office buildings, retail spaces, hotels, and other business facilities."
+		},
+		{
+			"icon": "/leaf.png",
+			"title": "Sustainable Engineering",
+			"description": "Environmentally responsible design and construction practices that minimize ecological impact while maximizing efficiency."
+		},
+		{
+			"icon": "/building.png",
+			"title": "Construction Management",
+			"description": "End-to-end construction management services from planning to execution, ensuring projects are completed on time and within budget."
+		},
+		{
+			"icon": "/blueprint.png",
+			"title": "Architectural Design",
+			"description": "Creative architectural solutions that combine aesthetic appeal with functional efficiency for all types of buildings and structures."
+		},
+		{
+			"icon": "/civil.png",
+			"title": "Civil Engineering",
+			"description": "Comprehensive civil engineering services including structural analysis, design, and implementation for infrastructure projects."
+		},
+		{
+			"icon": "/electrical.png",
+			"title": "Electrical Engineering",
+			"description": "Advanced electrical system design and installation for residential, commercial, and industrial projects."
+		},
+		{
+			"icon": "/mechanical.png",
+			"title": "Mechanical Engineering",
+			"description": "Design and implementation of mechanical systems including HVAC, plumbing, and fire protection for all types of buildings."
+		},
+		{
+			"icon": "/highway.png",
+			"title": "Highway & Bridge Construction",
+			"description": "Specialized expertise in the construction and maintenance of highways, bridges, and other transportation infrastructure."
+		},
+		{
+			"icon": "/environmental.png",
+			"title": "Environmental Engineering",
+			"description": "Sustainable solutions for environmental challenges, including waste management, water treatment, and pollution control."
+		},
+		{
+			"icon": "/renovation.png",
+			"title": "Renovation & Retrofitting",
+			"description": "Expert renovation services to modernize existing structures while preserving their integrity and enhancing functionality."
+		},
+		{
+			"icon": "/consulting.png",
+			"title": "Engineering Consultation",
+			"description": "Professional engineering consultation services for project feasibility studies, technical evaluations, and problem-solving."
+		}
+	],
+	"teamSection": {
+		"topManagement": {
+			"title": "Top Management",
+			"description": "SINAMM Engineering Limited believes in teamwork. We feel proud to have a very strong team and we are confident to achieve our goals and objectives with accuracy. We are dedicated to provide the most efficient and effective skills in the Country. We are working continuously to improve our system to provide best and efficient services to our clients and also to match with the upcoming days."
+		}
+	}
+}
