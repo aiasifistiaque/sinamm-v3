@@ -8,7 +8,7 @@ import Column from './Column';
 const styles = {
 	headingCss: {
 		className:
-			'text-[3.375rem] md:text-[6.125rem] leading-[.9] font-light font-primary tracking-[-2px]',
+			'text-[3.375rem] md:-ml-1 md:text-[6.125rem] leading-[.9] font-light font-primary tracking-[-2px]',
 	},
 };
 // const styles = {
