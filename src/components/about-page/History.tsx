@@ -34,11 +34,14 @@ const History = () => {
 	return (
 		<Container className=''>
 			<Grid className='grid-cols-1 md:grid-cols-2 gap-6'>
-				<img
-					src='/history.webp'
-					alt='img'
-					className='object-cover rounded-card'
-				/>
+				<div className=' flex justify-center'>
+					<img
+						src='/history.webp'
+						alt='img'
+						className='object-cover rounded-card'
+					/>
+				</div>
+				
 
 				<div className='flex flex-col space-y-4 justify-center animate-fade-in'>
 					{/* <h2 className='text-5xl md:text-8xl font-primary font-bold text-gray-800  mb-8s'></h2> */}
@@ -132,7 +135,7 @@ const History = () => {
 					</div>
 				</div>
 			</Grid>
-			<BorderBottom className='container mx-auto py-0' />
+			{/* <BorderBottom className='container mx-auto py-0' /> */}
 		</Container>
 	);
 };

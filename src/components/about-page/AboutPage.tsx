@@ -35,10 +35,11 @@ const AboutPage = () => {
 				{/* Page Header */}
 
 				<OurCompany />
-				<BorderBottom />
+				<BorderBottom className='container mx-auto py-0' />
 				{/* history */}
 				<History />
-				<div className='py-4'>
+				<BorderBottom className='container mx-auto py-0' />
+				<div className='container mx-auto py-0'>
 					<TopManagement data={topManagement} />
 				</div>
 				<BorderBottom className='container mx-auto py-0' />
@@ -46,7 +47,7 @@ const AboutPage = () => {
 				<BorderBottom />
 				<Management />
 				<BorderBottom />
-				<Container className='py-4'>
+				<Container className='pt-4'>
 					<CoreValues />
 				</Container>
 			</AboutRootPage>

@@ -160,7 +160,7 @@ const PieChartDashboard = () => {
 	];
 
 	return (
-		<div className='mb-24 flex flex-col gap-4'>
+		<div className=' flex flex-col gap-4'>
 			{/* Main Chart */}
 
 			<div className=''>

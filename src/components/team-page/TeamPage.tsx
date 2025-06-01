@@ -30,7 +30,7 @@ const TeamPage = ({ data, chartData }: any) => {
 					headerText='Meet Our Top Management of SINAMM Engineering'
 					headerDescription='SINAMM Engineering Limited believes in teamwork. We feel proud to have a very strong team and we are confident to achieve our goals and objectives with accuracy. We are dedicated to provide the most efficient and effective skills in the Country. We are working continuously to improve our system to provide best and efficient services to our clients and also to match with the upcoming days.'>
 					{/* team section */}
-					<div className='grid grid-cols-1 sm:grid-cols-3 gap-[2px] md:grid-cols-5 gap-6 md:px-1'>
+					<div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 md:px-1'>
 						{topManagement?.map((member: any) => (
 							<Card
 								key={member?._id}
