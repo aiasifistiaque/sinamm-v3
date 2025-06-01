@@ -34,14 +34,14 @@ const History = () => {
 	return (
 		<Container className=''>
 			<Grid className='grid-cols-1 md:grid-cols-2 gap-6'>
-				<div className=' flex justify-center'>
+				<div className='flex justify-center'>
 					<img
-						src='/history.webp'
+						src='/DSC03240.jpg'
+						// src='/history.webp'
 						alt='img'
 						className='object-cover rounded-card'
 					/>
 				</div>
-				
 
 				<div className='flex flex-col space-y-4 justify-center animate-fade-in'>
 					{/* <h2 className='text-5xl md:text-8xl font-primary font-bold text-gray-800  mb-8s'></h2> */}
@@ -51,22 +51,27 @@ const History = () => {
 					<BorderBottom className='md:py-5 py-1' />
 					<div className='flex gap-4 text-paraText flex-col'>
 						<Subtitle>
-							SINAMM ENGINEERING LIMITED named as SINAMM was conceived and formed in the year 2004
-							by a team of qualified Engineers and other professionals possessing long-standing
-							experience in various fields of Constructional activities with a vision and mission
-							and to play a significant role in development and construction sector in near future.
+							SINAMM ENGINEERING LIMITED named as SINAMM was conceived and
+							formed in the year 2004 by a team of qualified Engineers and other
+							professionals possessing long-standing experience in various
+							fields of Constructional activities with a vision and mission and
+							to play a significant role in development and construction sector
+							in near future.
 						</Subtitle>
 						<Subtitle>
-							Construction, more than any industry, is indeed a service-profession, the lure of
-							becoming a civil engineering contractor attracts many, but not all can survive these
-							challenges. Many give up due to a lack of experience or inability to tackle the
-							hazards involved. SINAMM has started the journey to take these challenges and is
-							determined to exist its excellence in the field of construction such as buildings,
-							industry and infrastructure projects through innovative planning and employing the
-							latest techniques with continuous advancement. We believe that our dedication,
-							commitment, technical superiority, experienced human resources, and collective
-							management efforts will ensure quality, accuracy and timely completion of works for
-							the prospective client.
+							Construction, more than any industry, is indeed a
+							service-profession, the lure of becoming a civil engineering
+							contractor attracts many, but not all can survive these
+							challenges. Many give up due to a lack of experience or inability
+							to tackle the hazards involved. SINAMM has started the journey to
+							take these challenges and is determined to exist its excellence in
+							the field of construction such as buildings, industry and
+							infrastructure projects through innovative planning and employing
+							the latest techniques with continuous advancement. We believe that
+							our dedication, commitment, technical superiority, experienced
+							human resources, and collective management efforts will ensure
+							quality, accuracy and timely completion of works for the
+							prospective client.
 						</Subtitle>
 						{/* <p className=' leading-relaxed text-md'>
 		<Container className='px-1 md:px-2'>

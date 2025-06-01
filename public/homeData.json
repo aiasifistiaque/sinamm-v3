@@ -104,17 +104,18 @@
 			"paragraphs": [
 				"SINAMM ENGINEERING LIMITED, named as SINAMM, was conceived and formed in the year 2004 by a team of qualified Engineers and other professionals possessing long-standing experience in various fields of constructional activities with a vision and mission to play a significant role in the development and construction sector in the near future."
 			],
+
 			"images": [
 				{
-					"url": "/constructionSite.webp",
+					"url": "/shams.jpg",
 					"alt": "Construction Site"
 				},
 				{
-					"url": "/sinammOffice.webp",
+					"url": "/DSC00128.JPG",
 					"alt": "Sinamm Engineering Office"
 				},
 				{
-					"url": "/engiDesign.webp",
+					"url": "/now.JPG",
 					"alt": "Engineering Design"
 				}
 			]

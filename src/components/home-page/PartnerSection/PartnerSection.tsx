@@ -78,7 +78,7 @@ const PartnerSection = ({ data: allClients }: any) => {
 						/> */}
 					{/* </Flex> */}
 					<img
-						src='/ruppur.jpeg'
+						src='/partner.jpg'
 						className='h-[40vh] md:h-[90vh] mt-[64px] w-full object-center object-cover'
 					/>
 				</Column>
