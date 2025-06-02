@@ -5,6 +5,7 @@ import ReduxProvider from '@/components/provider/ReduxProvider';
 import LoadingProvider from '@/components/providers/LoadingProvider';
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://sinammengineering.com'),
 	title: 'SINAMM ENGINEERING LIMITED',
 	description:
 		"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.",

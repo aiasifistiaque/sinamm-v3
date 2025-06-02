@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -15,7 +15,6 @@ NProgress.configure({
 
 export default function LoadingProvider({ children }: { children: React.ReactNode }) {
 	const pathname = usePathname();
-	const searchParams = useSearchParams();
 
 	useEffect(() => {
 		// Handle link clicks to start loading immediately
@@ -45,16 +44,18 @@ export default function LoadingProvider({ children }: { children: React.ReactNod
 	}, []);
 
 	useEffect(() => {
-		// Complete loading when route changes
+		// Complete loading when route changes and scroll to top
 		const timer = setTimeout(() => {
 			NProgress.done();
+			// Scroll to top when page changes
+			window.scrollTo(0, 0);
 		}, 100);
 
 		return () => {
 			clearTimeout(timer);
 			NProgress.done();
 		};
-	}, [pathname, searchParams]);
+	}, [pathname]);
 
 	return <>{children}</>;
 }
