@@ -11,7 +11,7 @@ type ProjectPageProps = {
 	children: React.ReactNode;
 };
 
-const ProjectsPage = ({ data, ui, categories, title, docs }: any) => {
+const ProjectsPage = ({ data, ui, title, docs }: any) => {
 	const handleFilterChange = (filter: any, category?: string) => {};
 	return (
 		<RootLayout>
@@ -34,7 +34,6 @@ const ProjectsPage = ({ data, ui, categories, title, docs }: any) => {
 						<ProjectButton
 							title={`${title}`}
 							onFilterChange={handleFilterChange}
-							categories={categories}
 						/>
 
 						<ProjectBodyMain

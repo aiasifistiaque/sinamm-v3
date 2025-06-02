@@ -6,9 +6,7 @@ import { TabConentThreeV2 } from './tab-contents';
 import RelatedProjectCard from '../RelatedProjectCard';
 import PageTitle from '@/components/home-page/PageTitle';
 import Container from '@/components/home-page/Container';
-// import { RelatedProject } from '@/components/project-page';
-// import RelatedProjectCard from '../RelatedProjectCard';
-// import RelatedProjectCard from '../RelatedProjectCard';
+import ImageGallery from './tab-contents/ImageGallery';
 
 const ProjectDetailsPageV2 = ({ data, projectGallerieData }: any) => {
 	return (
@@ -22,19 +20,28 @@ const ProjectDetailsPageV2 = ({ data, projectGallerieData }: any) => {
 						</p>
 					</div>
 					{/* slider */}
-					<HeroSlider data={projectGallerieData} />
+					<HeroSlider
+						data={projectGallerieData}
+						id={data?.gallery?._id}
+						image={data?.image}
+					/>
 				</div>
 				{/* project details */}
 
 				<ProjectOverview data={data} />
 
 				{/* gallery image */}
-				<div className='mt-10 lg:mt-18'>
+				{/* <div className='mt-10 lg:mt-18'>
 					<TabConentThreeV2 projectGallerieData={projectGallerieData} />
+				</div> */}
+				<div className='mt-10 lg:mt-18'>
+					<ImageGallery id={data?.gallery?._id} />
 				</div>
 				{/* related projects */}
 				<div className='mt-10 lg:mt-18'>
-					<PageTitle className='mb-4'>Related Projects</PageTitle>
+					<PageTitle className='mb-4 text-4xl font-primary md:text-[50px]'>
+						Related Projects
+					</PageTitle>
 					<RelatedProjectCard data={data} />
 				</div>
 			</Container>

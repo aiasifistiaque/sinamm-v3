@@ -1,0 +1,57 @@
+/* NProgress Loading Bar Styles - Google-like */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #074d87; /* Google blue */
+  position: fixed;
+  z-index: 9999; /* High z-index to appear above everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thin like Google's */
+  border-radius: 0 1px 1px 0;
+}
+
+/* Fancy blur effect at the end */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #074d87, 0 0 5px #074d87;
+  opacity: 1.0;
+  
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+      -ms-transform: rotate(3deg) translate(0px, -4px);
+          transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove the spinner completely */
+#nprogress .spinner {
+  display: none !important;
+}
+
+/* Smooth animations */
+#nprogress .bar {
+  transition: all 0.2s ease-out;
+}
+
+/* Additional styles for smoother experience */
+#nprogress .bar {
+  box-shadow: 0 0 2px rgba(66, 133, 244, 0.4);
+}
+
+/* Dark mode support - slightly brighter blue */
+@media (prefers-color-scheme: dark) {
+  #nprogress .bar {
+    background: #074d87;
+    box-shadow: 0 0 2px rgba(95, 157, 237, 0.4);
+  }
+  
+  #nprogress .peg {
+    box-shadow: 0 0 10px #074d87, 0 0 5px #074d87;
+  }
+}

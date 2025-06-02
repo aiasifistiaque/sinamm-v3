@@ -1,19 +1,26 @@
 import { ProjectDetailsPageV2 } from '@/components/project-details';
-import { ProjectDetailsPage } from '@/components/project-page';
-// import { ProjectDetailsPage } from '@/components/project-page';
 import { ScrollContainer } from '@/components/smooth-scroll';
-import { getProjectGalleries } from '@/store/ssr';
 import { getAproject } from '@/store/ssr/getAProject';
 import { Metadata } from 'next';
-import { useParams } from 'next/navigation';
+import { cache } from 'react';
+
 import React from 'react';
+
+// Cache the project data to avoid duplicate API calls
+const getCachedProject = cache(async (id: string) => {
+	return await getAproject(id);
+});
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export async function generateMetadata({ params }: any): Promise<Metadata> {
 	const { id: projectId } = await params;
 
-	const prodjectData = await getAproject(projectId);
-	const title = 'SINAMM ENGINEERING LIMITED';
+	const projectData = await getCachedProject(projectId);
+	const projectTitle = projectData?.title || 'Project';
+	const title = `${projectTitle} - SINAMM ENGINEERING LIMITED`;
 	const description =
+		projectData?.description ||
 		'Explore projects by SINAMM ENGINEERING LIMITED, a trusted construction company based in Dhaka. Specializing in building construction, Sinamm delivers high-quality infrastructure solutions across Bangladesh.';
 
 	return {
@@ -22,34 +29,35 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 		openGraph: {
 			title: title,
 			description: description,
-			images: [prodjectData?.image],
+			images: projectData?.image ? [projectData.image] : ['/seo-image.jpg'],
 			type: 'website',
-			locale: 'en-us',
-			url: `${BASE_URL}`,
-			siteName: `${BASE_URL}`,
+			url: `https://sinammengineering.com/projects/${projectId}`,
+			siteName: 'SINAMM ENGINEERING LIMITED',
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: projectData?.image ? [projectData.image] : ['/seo-image.jpg'],
+		},
+		alternates: {
+			canonical: `https://sinammengineering.com/projects/${projectId}`,
 		},
 	};
 }
-const SingleProject = async ({ params }: any) => {
-	const paramsId = params?.id;
-	// const { id } = useParams();
-	// console.log('params id:', id);
-	const singleProjectData: any = await getAproject(paramsId);
-	const projectGallerieData: any = await getProjectGalleries(
-		singleProjectData?.gallery?._id
-	);
 
-	console.log('root galery data:', projectGallerieData);
+const SingleProject = async ({ params }: any) => {
+	const { id: projectId } = await params;
+
+	const singleProjectData: any = await getCachedProject(projectId);
+	//const projectGallerieData: any = await getProjectGalleries(singleProjectData?.gallery?._id);
+
 	return (
 		<ScrollContainer>
 			<ProjectDetailsPageV2
 				data={singleProjectData}
-				projectGallerieData={projectGallerieData}
+				// projectGallerieData={projectGallerieData}
 			/>
-			{/* <ProjectDetailsPage
-				data={singleProjectData}
-				projectGallerieData={projectGallerieData}
-			/> */}
 		</ScrollContainer>
 	);
 };

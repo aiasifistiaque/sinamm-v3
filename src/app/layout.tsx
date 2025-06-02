@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import '../styles/nprogress.css';
 import ReduxProvider from '@/components/provider/ReduxProvider';
+import LoadingProvider from '@/components/providers/LoadingProvider';
 
 export const metadata: Metadata = {
 	title: 'SINAMM ENGINEERING LIMITED',
@@ -46,7 +48,9 @@ export default function Layout({
 		<html lang='en'>
 			<body className={` font-secondary bg-mainBg antialiased`}>
 				<ReduxProvider>
-					<div className='min-h-[80vh] '>{children}</div>
+					<LoadingProvider>
+						<div className='min-h-[80vh] '>{children}</div>
+					</LoadingProvider>
 				</ReduxProvider>
 			</body>
 		</html>

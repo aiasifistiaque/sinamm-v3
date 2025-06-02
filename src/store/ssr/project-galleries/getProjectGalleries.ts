@@ -2,15 +2,6 @@
 const BASE_URL = process.env.NEXT_PUBLIC_BACKEND;
 
 export async function getProjectGalleries(id: string) {
-	// const params = new URLSearchParams({
-	// 	sort: '-createdAt', // Match RTK Query default
-	// 	page: '1', // Match RTK Query default
-	// 	limit: limit.toString(), // High limit for SSR
-	// 	category_in: ids, // Filter by category IDs
-	// 	isActive: 'true', // Match filters: { isActive: true }
-	// });
-
-	// Get token from cookies
 	const token = process.env.NEXT_PUBLIC_TOKEN;
 
 	const headers: Record<string, string> = {
