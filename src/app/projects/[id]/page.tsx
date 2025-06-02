@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 			description: description,
 			images: projectData?.image ? [projectData.image] : ['/seo-image.jpg'],
 			type: 'website',
-			url: `https://sinammengineering.com/projects/${projectId}`,
+			url: `https://sinamm.mintapp.store/projects/${projectId}`,
 			siteName: 'SINAMM ENGINEERING LIMITED',
 		},
 		twitter: {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 			images: projectData?.image ? [projectData.image] : ['/seo-image.jpg'],
 		},
 		alternates: {
-			canonical: `https://sinammengineering.com/projects/${projectId}`,
+			canonical: `https://sinamm.mintapp.store/projects/${projectId}`,
 		},
 	};
 }

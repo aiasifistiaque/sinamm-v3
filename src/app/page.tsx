@@ -7,30 +7,65 @@ import { getHero, getHomeProject, getPartners } from '@/store/ssr';
 import { Metadata } from 'next';
 
 export function generateMetadata({ params }: any, parent: any): Metadata {
-	// Check if data exists before using it
 	const title = 'SINAMM ENGINEERING LIMITED';
 	const description =
-		'SINAMM ENGINEERING LIMITED is based in Dhaka, within the Dhaka Division. The company operates in the building construction industry. For inquiries, you can contact them at +88-02-55029316 to 21.';
-	//heelo
+		"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.";
+
 	return {
 		title,
 		description,
+		metadataBase: new URL('https://sinamm.mintapp.store'),
+		authors: [{ name: 'SINAMM Engineering Limited' }],
+		keywords: ['construction', 'engineering', 'Bangladesh', 'infrastructure', 'building', 'Dhaka'],
 		openGraph: {
 			title: 'SINAMM ENGINEERING LIMITED',
-			description:
-				"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.",
-			url: 'https://sinammengineering.com',
+			description,
+			url: 'https://sinamm.mintapp.store',
 			siteName: 'SINAMM Engineering Limited',
 			images: [
 				{
-					url: '/DSC00128.jpeg',
+					url: 'https://sinamm.mintapp.store/DSC00128.jpeg',
+					width: 1200,
+					height: 900,
+					alt: 'SINAMM Engineering Limited - Construction and Engineering Excellence',
+					type: 'image/jpeg',
+				},
+				{
+					// Fallback image
+					url: 'https://sinamm.mintapp.store/seo-image.jpg',
 					width: 1200,
 					height: 630,
 					alt: 'SINAMM Engineering Limited',
+					type: 'image/jpeg',
 				},
 			],
 			locale: 'en_US',
 			type: 'website',
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title: 'SINAMM ENGINEERING LIMITED',
+			description,
+			images: ['https://sinamm.mintapp.store/social-share.jpg'],
+			creator: '@sinammengineering',
+		},
+		alternates: {
+			canonical: 'https://sinamm.mintapp.store',
+		},
+		robots: {
+			index: true,
+			follow: true,
+			googleBot: {
+				index: true,
+				follow: true,
+				'max-video-preview': -1,
+				'max-image-preview': 'large',
+				'max-snippet': -1,
+			},
+		},
+		verification: {
+			google: 'your-google-verification-code',
+			// Add other verification codes as needed
 		},
 	};
 }

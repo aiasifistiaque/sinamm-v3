@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 			},
 		],
 		type: 'website',
-		url: 'https://sinammengineering.com/projects',
+		url: 'https://sinamm.mintapp.store/projects',
 		siteName: 'SINAMM ENGINEERING LIMITED',
 	},
 	twitter: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 		images: ['/seo-image.jpg'],
 	},
 	alternates: {
-		canonical: 'https://sinammengineering.com/projects',
+		canonical: 'https://sinamm.mintapp.store/projects',
 	},
 };
 
