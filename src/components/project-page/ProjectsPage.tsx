@@ -1,13 +1,10 @@
 'use client';
 import React, { useState } from 'react';
-import RootPage from '@/components/root/RootPage';
 import ProjectButton from '@/components/home-page/Projects/ProjectButton';
 
 import RootLayout from '@/components/layout/RootLayout/RootLayout';
 import { ScrollContainer } from '../smooth-scroll';
 import { ProjectBodyMain } from '../home-page';
-import TextBreak from '../ui/TextBreak';
-import BorderBottom from '../ui/BorderBottom';
 
 import { Subtitle, Container, Column, Box, PageTitle } from '@/components';
 type ProjectPageProps = {
@@ -15,12 +12,7 @@ type ProjectPageProps = {
 };
 
 const ProjectsPage = ({ data, ui, categories, title, docs }: any) => {
-	const [filteredProject, setFilteredProject] = useState<any>('all');
-	const handleFilterChange = (filter: any, category?: string) => {
-		// No-op since ProjectButton handles navigation client-side
-		// If you need client-side logic (e.g., UI updates), add it here
-		// console.log('Filter changed:', { filter, category });
-	};
+	const handleFilterChange = (filter: any, category?: string) => {};
 	return (
 		<RootLayout>
 			<ScrollContainer>
@@ -40,7 +32,7 @@ const ProjectsPage = ({ data, ui, categories, title, docs }: any) => {
 							</Column>
 						</Column>
 						<ProjectButton
-							title={`${title}: ${docs}`}
+							title={`${title}`}
 							onFilterChange={handleFilterChange}
 							categories={categories}
 						/>

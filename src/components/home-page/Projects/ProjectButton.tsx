@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { Column, Flex } from '@/components';
+import { Flex } from '@/components';
 import { PiArrowCircleUpRightLight } from 'react-icons/pi';
 import { useIsMobile } from '@/components/hooks/use-mobile';
 
@@ -21,7 +21,6 @@ interface ProjectButtonProps {
 }
 
 const ProjectButton: React.FC<ProjectButtonProps> = ({ onFilterChange, categories, title }) => {
-	const router = useRouter();
 	const searchParams = useSearchParams();
 	const typeParam = searchParams.get('type');
 
@@ -32,11 +31,6 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ onFilterChange, categorie
 	};
 
 	const [activeFilter, setActiveFilter] = useState<ProjectFilter>(getInitialFilter());
-	const handleFilterClick = (filter: ProjectFilter) => {
-		setActiveFilter(filter);
-		onFilterChange(filter);
-		router.push(`/projects?type=${filter}`);
-	};
 
 	// Sync activeFilter with URL changes
 	useEffect(() => {
@@ -84,15 +78,14 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ onFilterChange, categorie
 
 			<Flex className='gap-2 w-full md:w-auto justify-between md:justify-end'>
 				{filterButtons.map(
-					(button, index) =>
+					(button: any, i: number) =>
 						activeFilter !== button?.value && (
 							<Link
-								key={index}
+								key={i}
 								href={`/projects?type=${button?.value}`}>
 								<Button
 									variant={activeFilter === button?.value ? 'default' : 'outline'}
-									className={cn(buttonCss)}
-									onClick={() => handleFilterClick(button?.value)}>
+									className={cn(buttonCss)}>
 									{!isMobile && 'View '}
 									<span className='font-semibold'>{button?.label}</span>Projects
 								</Button>

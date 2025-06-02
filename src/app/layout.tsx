@@ -1,25 +1,40 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/layout/Navbar/Navbar';
-import { Footer } from '@/components/layout/footer';
 import ReduxProvider from '@/components/provider/ReduxProvider';
-
-// const geistSans = Geist({
-// 	variable: '--font-geist-sans',
-// 	subsets: ['latin'],
-// });
-
-// const geistMono = Geist_Mono({
-// 	variable: '--font-geist-mono',
-// 	subsets: ['latin'],
-// });
 
 export const metadata: Metadata = {
 	title: 'SINAMM ENGINEERING LIMITED',
 	description:
-		'SINAMM ENGINEERING LIMITED is based in Dhaka, within the Dhaka Division. The company operates in the building construction industry. For inquiries, you can contact them at +88-02-55029316 to 21.',
-	icons: '/seo-image.png',
+		"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.",
+	icons: {
+		icon: '/seo-image.png',
+		shortcut: '/seo-image.png',
+		apple: '/seo-image.png',
+	},
+	openGraph: {
+		title: 'SINAMM ENGINEERING LIMITED',
+		description:
+			"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.",
+		url: 'https://sinammengineering.com',
+		siteName: 'SINAMM Engineering Limited',
+		images: [
+			{
+				url: '/DSC00128.JPG',
+				width: 1200,
+				height: 630,
+				alt: 'SINAMM Engineering Limited',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'SINAMM ENGINEERING LIMITED',
+		description:
+			"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering.",
+		images: ['/DSC00128.JPG'],
+	},
 };
 
 export default function Layout({

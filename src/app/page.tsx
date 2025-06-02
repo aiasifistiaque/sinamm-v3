@@ -1,20 +1,10 @@
-import { Container, PageTitle } from '@/components';
-import {
-	About,
-	CtaSection,
-	Gallery,
-	HeroSection,
-	HeroV2,
-	News,
-	PartnerSection,
-	ProjectSection,
-} from '@/components/home-page';
+import { About, HeroSection, News, PartnerSection, ProjectSection } from '@/components/home-page';
 import HomePage from '@/components/home-page/HomePage';
 import PolicySection from '@/components/home-page/PolicySection/PolicySection';
 import RootLayout from '@/components/layout/RootLayout/RootLayout';
 
 import { getHero, getHomeProject, getPartners } from '@/store/ssr';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 
 export async function generateMetadata({ params }: any, parent: any): Promise<Metadata> {
 	// Check if data exists before using it
@@ -27,14 +17,21 @@ export async function generateMetadata({ params }: any, parent: any): Promise<Me
 		title,
 		description,
 		openGraph: {
-			title,
-			description,
-			// images: image ? [image] : previousImages,
-			images: image,
+			title: 'SINAMM ENGINEERING LIMITED',
+			description:
+				"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering. Our team of experienced professionals brings innovation, quality, and reliability to every project we undertake.",
+			url: 'https://sinammengineering.com',
+			siteName: 'SINAMM Engineering Limited',
+			images: [
+				{
+					url: '/DSC00128.JPG',
+					width: 1200,
+					height: 630,
+					alt: 'SINAMM Engineering Limited',
+				},
+			],
+			locale: 'en_US',
 			type: 'website',
-			locale: 'en-US',
-			url: 'https://sinamm-frontend.vercel.app',
-			siteName: title,
 		},
 	};
 }
