@@ -1,11 +1,10 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import SectionIntro from '@/components/ui/SectionIntro';
 import Container from '../Container';
 import Flex from '../Flex';
 import Column from '../Column';
-// import { useIsMobile } from '@/components/hooks/use-mobile';
 
 const PartnerCard = ({ item }: { item: any }) => (
 	<div className='mr-8 rounded-card p-1'>
@@ -24,7 +23,6 @@ const PartnerSection = ({ data: allClients }: any) => {
 				<Column className='py-[44px] rounded-card'>
 					<SectionIntro
 						className='space-y-5'
-						// paragraphClassName='px-4'
 						headerText='Trusted by the industry leaders worldwide'
 						headingText='Trusted by the industry leaders worldwide'
 						href='/clients'
@@ -42,7 +40,7 @@ const PartnerSection = ({ data: allClients }: any) => {
 							}}>
 							{allClients?.map((client: any, i: number) => (
 								<PartnerCard
-									key={i}
+									key={client?.name}
 									item={client}
 								/>
 							))}

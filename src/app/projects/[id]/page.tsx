@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 	const { id: projectId } = await params;
 
 	const projectData = await getCachedProject(projectId);
-	const projectTitle = projectData?.title || 'Project';
+	const projectTitle = projectData?.name || 'Project';
 	const title = `${projectTitle} - SINAMM ENGINEERING LIMITED`;
 	const description =
 		projectData?.description ||

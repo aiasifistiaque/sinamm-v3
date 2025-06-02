@@ -1,9 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { useEffect, useState, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Autoplay } from 'swiper/modules';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -12,7 +10,6 @@ import 'swiper/css/autoplay';
 import '../../styles/parallax.css';
 
 import HeroContent from './HeroContent';
-import Container from './Container';
 
 interface HeroSectionProps {
 	className?: string;

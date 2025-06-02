@@ -2,7 +2,6 @@
 import RootLayout from '@/components/layout/RootLayout/RootLayout';
 import React from 'react';
 import { HeroSlider, ProjectOverview } from '../v2';
-import { TabConentThreeV2 } from './tab-contents';
 import RelatedProjectCard from '../RelatedProjectCard';
 import PageTitle from '@/components/home-page/PageTitle';
 import Container from '@/components/home-page/Container';

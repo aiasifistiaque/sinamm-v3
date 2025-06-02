@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 		siteName: 'SINAMM Engineering Limited',
 		images: [
 			{
-				url: '/DSC00128.JPG',
+				url: '/DSC00128.jpeg',
 				width: 1200,
 				height: 630,
 				alt: 'SINAMM Engineering Limited',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 		title: 'SINAMM ENGINEERING LIMITED',
 		description:
 			"Founded in 2008, SINAMM ENGINEERING LIMITED has grown to become one of Bangladesh's most trusted names in construction and engineering.",
-		images: ['/DSC00128.JPG'],
+		images: ['/DSC00128.jpeg'],
 	},
 };
 

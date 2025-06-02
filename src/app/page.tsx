@@ -6,12 +6,11 @@ import RootLayout from '@/components/layout/RootLayout/RootLayout';
 import { getHero, getHomeProject, getPartners } from '@/store/ssr';
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params }: any, parent: any): Promise<Metadata> {
+export function generateMetadata({ params }: any, parent: any): Metadata {
 	// Check if data exists before using it
 	const title = 'SINAMM ENGINEERING LIMITED';
 	const description =
 		'SINAMM ENGINEERING LIMITED is based in Dhaka, within the Dhaka Division. The company operates in the building construction industry. For inquiries, you can contact them at +88-02-55029316 to 21.';
-	const image = '/seo-image.png';
 	//heelo
 	return {
 		title,
@@ -24,7 +23,7 @@ export async function generateMetadata({ params }: any, parent: any): Promise<Me
 			siteName: 'SINAMM Engineering Limited',
 			images: [
 				{
-					url: '/DSC00128.JPG',
+					url: '/DSC00128.jpeg',
 					width: 1200,
 					height: 630,
 					alt: 'SINAMM Engineering Limited',
@@ -37,9 +36,12 @@ export async function generateMetadata({ params }: any, parent: any): Promise<Me
 }
 
 const Home = async () => {
-	const heroData = await getHero();
-	const projectsData = await getHomeProject();
-	const partnersData = await getPartners();
+	// Fetch all data in parallel for better performance
+	const [heroData, projectsData, partnersData] = await Promise.all([
+		getHero(),
+		getHomeProject(),
+		getPartners(),
+	]);
 
 	return (
 		<HomePage>

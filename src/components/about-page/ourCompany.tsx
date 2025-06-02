@@ -26,7 +26,7 @@ const images = [
 		alt: 'Construction Site',
 	},
 	{
-		url: '/DSC00128.JPG',
+		url: '/DSC00128.jpeg',
 		alt: 'Sinamm Engineering Office',
 	},
 	{

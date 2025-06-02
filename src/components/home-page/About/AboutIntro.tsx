@@ -20,7 +20,6 @@ const AboutIntro: React.FC<SectionIntroProps> = ({
 	return (
 		<div
 			className={`mb-5 flex flex-col flex-1 md:max-w-[50vw] uppercase ${className} text-mainText`}>
-			{/* <SectionHeader text={headerText || ""} /> */}
 			<h2
 				className={`text-3xl md:text-[54px] md:text-left uppercase trackint-[-1px] leading-[1] font-primary ${headingClassName}`}>
 				{headingText || ''}
