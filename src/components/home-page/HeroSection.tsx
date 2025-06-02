@@ -100,10 +100,10 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 				<motion.div
 					className='absolute inset-0 z-0 parallax-element enhanced-parallax overflow-hidden'
 					style={{ y: backgroundY }}>
-					<div className='relative w-full h-[140vh] bg-[#0d0d0d]'>
+					<motion.div className='relative w-full h-[140vh] bg-[#0d0d0d]'>
 						{/* Always visible background image to prevent black flash */}
 						{carouselImages && carouselImages[currentImageIndex] && (
-							<div
+							<motion.div
 								className='absolute inset-0 w-full h-full bg-cover bg-center opacity-40 transition-opacity duration-500'
 								style={{
 									backgroundImage: `url(${carouselImages[currentImageIndex]})`,
@@ -130,7 +130,7 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 										{/* Background fallback */}
 										<div className='absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 to-black' />
 
-										<Container>
+										<div className='bg-[red] h-full w-full'>
 											<motion.img
 												src={image}
 												alt={`Banner image ${index + 1}`}
@@ -164,7 +164,7 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 														  }
 												}
 											/>
-										</Container>
+										</div>
 
 										{/* Dynamic overlay that moves - only on active image */}
 										{isActive && (
@@ -184,7 +184,7 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 								);
 							})}
 						</div>
-					</div>
+					</motion.div>
 				</motion.div>
 			</div>
 
@@ -211,7 +211,7 @@ const HeroSection = ({ data, className }: HeroSectionProps) => {
 
 			{/* Content */}
 			<motion.div
-				className='relative z-20 w-full min-h-[100vh] parallax-element enhanced-parallax' // Increased content area height
+				className='relative z-20 w-full min-h-[100vh] parallax-element enhanced-parallax'
 				style={{ y: contentY }}>
 				<HeroContent textScale={textScale} />
 			</motion.div>
