@@ -1,9 +1,12 @@
-"use client"
+'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
 
 export default function ScrollContainer({ children }: any) {
+	const pathname = usePathname();
+
 	useEffect(() => {
 		const lenis: any = new Lenis({
 			duration: 2.5,
@@ -22,6 +25,9 @@ export default function ScrollContainer({ children }: any) {
 			// infinite: true,
 		});
 
+		// Make Lenis available globally for the LoadingProvider
+		(window as any).lenis = lenis;
+
 		const raf = (time: any) => {
 			lenis.raf(time);
 			requestAnimationFrame(raf);
@@ -31,8 +37,17 @@ export default function ScrollContainer({ children }: any) {
 
 		return () => {
 			lenis.destroy();
+			delete (window as any).lenis;
 		};
 	}, []);
+
+	// Reset scroll position when pathname changes
+	useEffect(() => {
+		if ((window as any).lenis) {
+			// Use immediate: true to jump to top instantly without animation
+			(window as any).lenis.scrollTo(0, { immediate: true });
+		}
+	}, [pathname]);
 
 	return <>{children}</>;
 }

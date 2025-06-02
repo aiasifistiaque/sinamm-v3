@@ -32,10 +32,10 @@ const PartnerSection = ({ data: allClients }: any) => {
 						paragraphText='We&#39;re proud to collaborate with forward-thinking organizations across various sectors, helping them achieve their infrastructure and development goals'
 					/>
 
-					<div className='mt-2 overflow-hidden relative'>
+					<div className='mt-2 overflow-hidden relative -mx-3 md:mx-0 '>
 						{/* Infinite scroll effect for desktop */}
 						<Flex
-							className='flex items-center animate-marquee-mobile md:animate-marquee-desktop'
+							className='items-center animate-marquee-mobile md:animate-marquee-desktop'
 							style={{
 								width: `${allClients?.length * 200}px`,
 								willChange: 'transform',
@@ -47,38 +47,13 @@ const PartnerSection = ({ data: allClients }: any) => {
 								/>
 							))}
 						</Flex>
-						{/* <Flex
-							className='items-center mt-12 animate-marquee-mobile-reverse md:animate-marquee-desktop-reverse'
-							style={{
-								width: `${allClients?.length * 200}px`,
-								willChange: 'transform',
-							}}>
-							{allClients?.map((client: any, i: number) => (
-								<PartnerCard
-									key={i}
-									item={client}
-								/>
-							))}
-						</Flex> */}
 					</div>
-
-					{/* <Flex className='w-full mt-12'> */}
-					{/* <Link
-							href='/clients'
-							className='inline-block text-textBlue font-medium hover:text-textHover transition-colors'
-						>
-							View all our clients →
-						</Link> */}
-					{/* <ViewAllLink
-							href='/clients'
-							text='View all our clients'
-							className='justify-center items-center w-full'
-						/> */}
-					{/* </Flex> */}
-					<img
-						src='/partner.jpg'
-						className='h-[40vh] md:h-[90vh] mt-[64px] w-full object-center object-cover'
-					/>
+					<div className='bg-[#0d0d0d] w-[100vw] md:w-full -mx-3 md:mx-0 h-[40vh] md:h-[90vh] mt-[64px]'>
+						<img
+							src='/partner.jpg'
+							className='h-full w-full object-center object-cover'
+						/>
+					</div>
 				</Column>
 			</Container>
 		</>

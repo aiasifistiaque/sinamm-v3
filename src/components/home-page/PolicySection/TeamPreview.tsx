@@ -14,7 +14,7 @@ const TeamPreview = () => {
 		},
 	});
 	const allImages = data?.doc?.flatMap((item: any) => item?.images || []) || [];
-	
+
 	// Split images into two groups for different marquees
 	const midPoint = Math.ceil(allImages.length / 2);
 	const firstGroupImages = allImages.slice(0, midPoint);
@@ -23,7 +23,7 @@ const TeamPreview = () => {
 	//
 	return (
 		// <Container>
-		<Column className='relative rounded-card z-4 overflow-hidden gap-[2px] py-[24px] pt-[24px]'>
+		<Column className='relative -mx-3 px-[2px] md:px-0 md:mx-0 rounded-card z-4 overflow-hidden gap-[2px] py-[24px] pt-[24px]'>
 			{/* Reverse Marquee */}
 			<Flex className='rounded-card z-4 overflow-hidden h-[200px] lg:h-[400px]'>
 				<div

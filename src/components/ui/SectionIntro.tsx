@@ -34,7 +34,7 @@ const SectionIntro: React.FC<SectionIntroProps> = ({
 	return (
 		<Flex className={`mb-8 flex flex-col ${className}`}>
 			<PageTitle className={`text-3xl ${className}`}>{headingText || ''}</PageTitle>
-			<Flex className='flex-col md:flex-row w-full items-center md:items-end md:justify-between gap-6 md:gap-8 '>
+			<Flex className='flex-col md:flex-row w-full items-end md:justify-between gap-6 md:gap-8 '>
 				<Subtitle
 					className={`md:max-w-[60vw] line-clamp-3 md:line-clamp-none ${paragraphClassName}`}>
 					{paragraphText || ''}
@@ -55,6 +55,7 @@ const SectionIntro: React.FC<SectionIntroProps> = ({
 							'cursor-pointer',
 							'uppercase',
 							'gap-1',
+
 							'items-center'
 						)}>
 						<p>{btnText}</p>

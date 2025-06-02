@@ -6,7 +6,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { PiArrowCircleUpRightThin } from 'react-icons/pi';
 import parser from 'html-react-parser';
-import { truncateHtml, truncateText } from '@/lib';
+import Column from '../Column';
+import Flex from '../Flex';
 
 type ProjectCardProps = {
 	project: any;
@@ -141,7 +142,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 						cursor: isHovered && !showDetails ? 'none' : 'pointer',
 					}}>
 					{/* Content Container - Always maintains bottom alignment for View Details */}
-					<div className={`p-6 pt-2 pb-0 h-full flex flex-col`}>
+					<Column className={`p-4 pt-2 pb-0 h-full flex flex-col`}>
 						{/* Main Content - Takes available space */}
 						<div className='flex-1 min-h-0'>
 							{/* Header - Always Visible */}
@@ -224,7 +225,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 									<motion.div
 										className='grid grid-cols-2 gap-4'
 										animate={detailsControls}>
-										
 										{/* loaction */}
 										{project?.location && (
 											<motion.div
@@ -374,16 +374,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, cols }) => {
 									duration: 0.3,
 									delay: isHovered ? 0.2 : 0,
 								}}>
-								<div className='flex justify-between text-blue-900 font-medium text-sm hover:underline transition-colors items-center w-full relative'>
+								<Flex className='flex justify-between text-blue-900 font-medium text-sm hover:underline transition-colors items-center w-full relative'>
 									<span>View Details & Gallery</span>
 									<PiArrowCircleUpRightThin
 										size={26}
 										className='text-blue-900 ml-2'
 									/>
-								</div>
+								</Flex>
 							</motion.div>
 						</Link>
-					</div>
+					</Column>
 				</motion.div>
 			</div>
 		</>

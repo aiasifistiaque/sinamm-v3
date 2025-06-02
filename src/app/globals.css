@@ -176,6 +176,88 @@
 }
 
 @layer utilities {
+	/* Optimized sheet animations with hardware acceleration */
+	@keyframes sheet-slide-in {
+		0% {
+			transform: translate3d(100%, 0, 0);
+			opacity: 0;
+		}
+		100% {
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+	}
+
+	@keyframes sheet-slide-out {
+		0% {
+			transform: translate3d(0, 0, 0);
+			opacity: 1;
+		}
+		100% {
+			transform: translate3d(100%, 0, 0);
+			opacity: 0;
+		}
+	}
+
+	@keyframes backdrop-fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes backdrop-fade-out {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes stagger-fade-in {
+		0% {
+			opacity: 0;
+			transform: translateX(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	/* Performance-optimized animations */
+	.animate-sheet-slide-in {
+		animation: sheet-slide-in 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		will-change: transform, opacity;
+		transform: translateZ(0);
+		backface-visibility: hidden;
+	}
+
+	.animate-sheet-slide-out {
+		animation: sheet-slide-out 300ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+		will-change: transform, opacity;
+		transform: translateZ(0);
+		backface-visibility: hidden;
+	}
+
+	.animate-backdrop-in {
+		animation: backdrop-fade-in 300ms ease-out forwards;
+	}
+
+	.animate-backdrop-out {
+		animation: backdrop-fade-out 200ms ease-in forwards;
+	}
+
+	.animate-stagger-in {
+		animation: stagger-fade-in 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		will-change: transform, opacity;
+		transform: translateZ(0);
+	}
+
+	/* Legacy animations for backward compatibility */
 	@keyframes sheet-open {
 		0% {
 			transform: translateX(100%);
@@ -311,4 +393,30 @@
 	#nprogress .spinner {
 		display: none;
 	}
+}
+
+/* Mobile Navbar Button - Ensure always clickable */
+.mobile-nav-button {
+	z-index: 999999 !important;
+	pointer-events: auto !important;
+	position: fixed !important;
+	isolation: isolate !important;
+}
+
+/* Ensure no other elements can interfere */
+.mobile-nav-button * {
+	pointer-events: none !important;
+}
+
+/* Mobile Navbar Button - Ensure always clickable */
+.mobile-nav-button {
+	z-index: 999999 !important;
+	pointer-events: auto !important;
+	position: fixed !important;
+	isolation: isolate !important;
+}
+
+/* Ensure no other elements can interfere */
+.mobile-nav-button * {
+	pointer-events: none !important;
 }

@@ -11,7 +11,7 @@ type PolicySectionProps = {};
 
 const PolicySection: FC<PolicySectionProps> = ({}) => {
 	return (
-		<Container className='mt-[-64px]'>
+		<Container className='mt-[-44px] md:mt-[-64px]'>
 			<Column>
 				<SectionIntro
 					className='space-y-5'

@@ -34,7 +34,7 @@ const RightSide: FC = () => {
 			</div>
 
 			{/* Floating Stats Box */}
-			<div className='absolute rounded-card -bottom-9 md:right-3 lg:-right-5 right-6 text-white bg-blueBg md:p-6 p-2 shadow-lg md:max-w-full animate-scale-in'>
+			<div className='absolute rounded-card -bottom-9 md:right-3 lg:-right-5 right-6 text-white bg-blueBg md:p-6 p-4 shadow-lg md:max-w-full animate-scale-in'>
 				<div className='grid grid-cols-2 md:gap-4 gap-2'>
 					{statsData.map((stat, index) => (
 						<div

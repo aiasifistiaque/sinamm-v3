@@ -44,11 +44,9 @@ export default function LoadingProvider({ children }: { children: React.ReactNod
 	}, []);
 
 	useEffect(() => {
-		// Complete loading when route changes and scroll to top
+		// Complete loading when route changes
 		const timer = setTimeout(() => {
 			NProgress.done();
-			// Scroll to top when page changes
-			window.scrollTo(0, 0);
 		}, 100);
 
 		return () => {
